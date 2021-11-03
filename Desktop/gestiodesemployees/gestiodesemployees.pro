@@ -18,12 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     connection.cpp \
     dialog.cpp \
+    employe.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     connection.h \
     dialog.h \
+    employe.h \
     mainwindow.h
 
 FORMS += \
