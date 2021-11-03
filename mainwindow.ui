@@ -6,26 +6,228 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>806</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>250</y>
-      <width>181</width>
-      <height>61</height>
+      <x>60</x>
+      <y>30</y>
+      <width>651</width>
+      <height>351</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Gestion des sportifs</string>
+    <property name="currentIndex">
+     <number>2</number>
     </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>ajouter un sportif</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>441</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>ajout</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>50</y>
+         <width>47</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>90</y>
+         <width>47</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>nom</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>130</y>
+         <width>47</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>prenom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_id">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>50</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_nom">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>90</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_prenom">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>130</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>180</y>
+         <width>47</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>age</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>230</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>type_sport</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_age">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>180</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_typesport">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>230</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>140</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ajouter</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>afficher les sportifs</string>
+     </attribute>
+     <widget class="QTableView" name="tab_sportifs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>621</width>
+        <height>311</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>supprimer un sportif</string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>identifiant</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_id_supp">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_supprimer">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>supprimer</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -33,8 +235,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>26</height>
+     <width>806</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

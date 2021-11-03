@@ -1,6 +1,7 @@
 #ifndef GESTIONDESSPORTIFS_H
 #define GESTIONDESSPORTIFS_H
 
+
 #include <QDialog>
 
 namespace Ui {
@@ -20,3 +21,7 @@ private:
 };
 
 #endif // GESTIONDESSPORTIFS_H
+
+
+#include <Qstring>
+

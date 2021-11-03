@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "sportifs.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,7 +19,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pb_ajouter_clicked();
+
+    void on_pb_supprimer_clicked();
+
 private:
     Ui::MainWindow *ui;
+    sportifs s;
 };
 #endif // MAINWINDOW_H

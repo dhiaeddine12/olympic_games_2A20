@@ -86,6 +86,9 @@
      </disabled>
     </palette>
    </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
      <string>Tab 1</string>
@@ -289,6 +292,36 @@
       <string>sécurité authentification </string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-5</y>
+       <width>861</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/07-45.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>groupBox</zorder>
+    <zorder>pushButton</zorder>
+    <zorder>pushButton_2</zorder>
+    <zorder>pushButton_3</zorder>
+    <zorder>pushButton_4</zorder>
+    <zorder>pushButton_5</zorder>
+    <zorder>pushButton_6</zorder>
+    <zorder>pushButton_7</zorder>
+    <zorder>pushButton_8</zorder>
+    <zorder>pushButton_9</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
