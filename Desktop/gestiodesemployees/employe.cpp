@@ -37,7 +37,7 @@ bool Employe::ajouter()
     QString annee_recrutement_string=QString::number(annee_recrutement);
     QString absence_string=QString::number(absence);
     QString heure_de_travail_string=QString::number(heure_de_travail);
-    query.prepare("INSERT INTO gestion_employe (id,age,annee_recrutement,absence,heure_de_travail,fonction,sexe,nom,prenom) "
+    query.prepare("INSERT INTO EMPLOYE (id,age,annee_recrutement,absence,heure_de_travail,fonction,sexe,nom,prenom) "
                      "VALUES (:id,:age,:annee_recrutement,:absence,:heure_de_travail,:fonction,:sexe,:nom,:prenom)");
      query.bindValue(":id", id_string);
      query.bindValue(":age", age_string);
@@ -55,16 +55,16 @@ bool Employe::ajouter()
 QSqlQueryModel* Employe::afficher()
 {
     QSqlQueryModel* model=new QSqlQueryModel();
-    model->setQuery("SELECT* FROM  gestion_employe");
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("age"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("annee_recrutement"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("absence"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("heure_de_travail"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction"));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr(""));
+    model->setQuery("SELECT* FROM  EMPLOYE");
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("id"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("age"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("annee_recrutement"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("absence"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("heure_de_travail"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("fonction"));
     model->setHeaderData(7, Qt::Horizontal, QObject::tr(""));
     model->setHeaderData(8, Qt::Horizontal, QObject::tr(""));
+    model->setHeaderData(9, Qt::Horizontal, QObject::tr(""));
     return model;
 }
 

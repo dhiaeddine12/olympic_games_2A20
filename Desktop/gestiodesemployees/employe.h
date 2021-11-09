@@ -29,7 +29,7 @@ public:
     void setfonction(QString);
 
     bool ajouter();
-    SQqlQueryModel* afficher();
+    QSqlQueryModel* afficher();
 
 
 
