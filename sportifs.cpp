@@ -24,21 +24,20 @@ void sportifs::settype_sport(QString type_sport) {this->type_sport=type_sport;}
 
 bool sportifs::ajouter()
 {
-    bool test=false;
 
     QSqlQuery query;
     QString id_string=QString::number(id);
     QString age_string=QString::number(age);
-          query.prepare("INSERT INTO sportifs (id, nom, prenom,age,type_sport) "
+          query.prepare("INSERT INTO SPORTIF (id, nom, prenom,age,type_sport) "
                         "VALUES (:id, :nom, :prenom, :age, :type_sport)");
-          query.bindValue(":id",id_string );
-          query.bindValue(":forename", nom);
-          query.bindValue(":surname", prenom);
-          query.bindValue(":age", age_string);
+          query.bindValue(":id",id);
+          query.bindValue(":nom", nom);
+          query.bindValue(":prenom", prenom);
           query.bindValue(":type sport", type_sport);
+          query.bindValue(":age", age);
           query.exec();
 
-    return test;
+   return query.exec();
 }
 
 bool sportifs::supprimer(int id)
@@ -46,7 +45,7 @@ bool sportifs::supprimer(int id)
     QSqlQuery query;
     QString id_string=QString::number(id);
     QString age_string=QString::number(age);
-          query.prepare("Delete from sportifs where id=:id");
+          query.prepare("Delete from SPORTIF where id=:id");
           query.bindValue(":id",id );
 
          return  query.exec();
@@ -60,12 +59,13 @@ QSqlQueryModel* sportifs::afficher()
 {
    QSqlQueryModel* model=new QSqlQueryModel();
 
-        model->setQuery("SELECT* FROM sportifs");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+        model->setQuery("SELECT* FROM SPORTIF");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("i"));
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("type de sport"));
         model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
-        model->setHeaderData(4, Qt::Horizontal, QObject::tr("type de sport"));
+
    return model;
 
 }
