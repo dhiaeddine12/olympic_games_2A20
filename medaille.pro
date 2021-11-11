@@ -19,18 +19,15 @@ SOURCES += \
     connection.cpp \
     gestion_medaille.cpp \
     main.cpp \
-    mainwindow.cpp \
     medaille.cpp
 
 HEADERS += \
     connection.h \
     gestion_medaille.h \
-    mainwindow.h \
     medaille.h
 
 FORMS += \
-    gestion_medaille.ui \
-    mainwindow.ui
+    gestion_medaille.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
