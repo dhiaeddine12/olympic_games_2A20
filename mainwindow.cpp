@@ -67,12 +67,9 @@ void MainWindow::on_pb_modifier_clicked()
        QString nom=ui->le_nom_2->text();
        QString prenom=ui->le_prenom_2->text();
        QString type_sport=ui->le_typesport_2->text();
-
        int age=ui->le_age_2->text().toInt();
 
        sportifs s(id,nom,prenom,type_sport,age);
-
-
         bool test=s.modifier(id);
         if(test)
         {
