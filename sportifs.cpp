@@ -70,15 +70,16 @@ QSqlQueryModel* sportifs::afficher()
 
 }
 
-bool sportifs::modifier()
+bool sportifs::modifier(int)
 
 {
+
          QSqlQuery query;
          query.prepare("UPDATE SPORTIF set id=:id, nom=:nom, prenom=:prenom, type_sport=:type_sport , age=:age where id=:id");
          query.bindValue(":id", id);
          query.bindValue(":nom",nom);
          query.bindValue(":prenom",prenom);
-         query.bindValue(":type_sport", type_sport);
+         query.bindValue(":type_sport",type_sport);
          query.bindValue(":age", age);
          return query.exec();
 

@@ -21,7 +21,7 @@ public:
     bool ajouter();
    QSqlQueryModel* afficher();
    bool supprimer(int);
-   bool modifier();
+   bool modifier(int);
 private :
     int id,age;
     QString nom,prenom,type_sport;
