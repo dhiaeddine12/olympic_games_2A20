@@ -78,7 +78,7 @@ void gestion_medaille::on_pushButton_Modifier_clicked()
   QString TYPE_S=ui->lineEdit_typeS_3->text();
    bool test=m.modifier(ID_M,TYPE_MEDAILLE,ANNEE_OBTENTION,PAYS,TYPE_S);
 
-    if ()
+    if (test)
     {
         // Refresh (Actualiser)
          ui->tableView->setModel(mdl.afficher());
