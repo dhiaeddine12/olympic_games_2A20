@@ -17,14 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
-    gestiondessportifs.cpp \
     main.cpp \
     mainwindow.cpp \
     sportifs.cpp
 
 HEADERS += \
     connection.h \
-    gestiondessportifs.h \
     mainwindow.h \
     sportifs.h
 

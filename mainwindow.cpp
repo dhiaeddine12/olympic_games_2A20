@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "gestiondessportifs.h"
+
 #include "sportifs.h"
 #include <QMessageBox>
 #include <QIntValidator>
@@ -23,11 +23,11 @@ MainWindow::~MainWindow()
 void MainWindow::on_pb_ajouter_clicked()
 {
 int id=ui->le_id->text().toInt();
-int age=ui->le_age->text().toInt();
 QString nom=ui->le_nom->text();
 QString prenom=ui->le_prenom->text();
 QString type_sport=ui->le_typesport->text();
-sportifs s(id,age,nom,prenom,type_sport);
+int age=ui->le_age->text().toInt();
+sportifs s(id,nom,prenom,type_sport,age);
 
 bool test=s.ajouter();
 QMessageBox msgBox;

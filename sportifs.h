@@ -7,20 +7,21 @@ class sportifs
 {
 public:
     sportifs();
-    sportifs(int,int,QString,QString,QString);
+    sportifs(int,QString,QString,QString,int);
     int getid();
-    int getage();
     QString getnom();
     QString getprenom();
     QString gettype_sport();
+    int getage();
     void setid(int);
-    void setage(int);
     void setnom(QString);
     void setprenom(QString);
     void settype_sport(QString);
+    void setage(int);
     bool ajouter();
    QSqlQueryModel* afficher();
    bool supprimer(int);
+   bool modifier();
 private :
     int id,age;
     QString nom,prenom,type_sport;
