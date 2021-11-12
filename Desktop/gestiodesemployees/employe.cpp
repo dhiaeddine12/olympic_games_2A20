@@ -44,6 +44,9 @@ bool Employe::ajouter()
     QString annee_recrutement_string=QString::number(annee_recrutement);
     QString absence_string=QString::number(absence);
     QString heure_de_travail_string=QString::number(heure_de_travail);
+
+    query.prepare("INSERT INTO EMPLOYE (id,nom,prenom,fonction,age,sexe,annee_recrutement,absence,heure_de_travail) "
+                  "VALUES (:id,:nom,:prenom,:fonction,:age,:sexe,:annee_recrutement,:absence,:heure_de_travail)");
     query.bindValue(":id", id_string);
     query.bindValue(":nom", nom );
     query.bindValue(":prenom", prenom);
@@ -53,12 +56,9 @@ bool Employe::ajouter()
     query.bindValue(":annee_recrutement", annee_recrutement_string);
     query.bindValue(":absence", absence_string);
     query.bindValue(":heure_de_travail", heure_de_travail_string);
+    query.exec();
 
-    query.prepare("INSERT INTO EMPLOYE (id,nom,prenom,fonction,age,sexe,annee_recrutement,absence,heure_de_travail) "
-                     "VALUES (:id,:nom,:prenom,:fonction,:age,:sexe,:annee_recrutement,:absence,:heure_de_travail)");
-
-
-    return query.exec();
+return query.exec();
 }
 
 QSqlQueryModel* Employe::afficher()
@@ -74,18 +74,21 @@ QSqlQueryModel* Employe::afficher()
     model->setHeaderData(7, Qt::Horizontal, QObject::tr("annee_recrutement"));
     model->setHeaderData(8, Qt::Horizontal, QObject::tr("absence"));
     model->setHeaderData(9, Qt::Horizontal, QObject::tr("heure_de_travail"));
+
     return model;
 }
 
 bool Employe::Supprimer(int id)
 {
     QSqlQuery query;
+    QString id_string=QString::number(id);
     query.prepare("DELETE from EMPLOYE where id=:id");
-    query.bindValue(":id",id);
+    query.bindValue(0,id);
+
     return query.exec();
 }
 
-bool Employe::Modifier()
+bool Employe::Modifier(int)
 
 {
          QSqlQuery query;

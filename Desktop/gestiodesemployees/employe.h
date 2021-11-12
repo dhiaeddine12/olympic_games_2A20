@@ -10,30 +10,29 @@ public:
     Employe();
     Employe(int,QString,QString,QString,int,QString,int,int,int);
     int getid();
+    QString getnom();
+    QString getprenom();
+    QString getfonction();
     int getage();
+    QString getsexe();
     int getannee_recrutement();
     int getabsence();
     int getheure_de_travail();
-    QString getfonction();
-    QString getsexe();
-    QString getnom();
-    QString getprenom();
+
     void setid(int);
+    void setnom(QString);
+    void setprenom(QString);
+    void setfonction(QString);
     void setage(int);
+    void setsexe(QString);
     void setannee_recrutement(int);
     void setabsence(int);
     void setheure_de_travail(int);
-    void setnom(QString);
-    void setprenom(QString);
-    void setsexe(QString);
-    void setfonction(QString);
 
       bool ajouter();
       QSqlQueryModel* afficher();
       bool Supprimer(int);
-      bool Modifier();
-
-
+      bool Modifier(int);
 
 private:
     int id, age, annee_recrutement, absence, heure_de_travail;

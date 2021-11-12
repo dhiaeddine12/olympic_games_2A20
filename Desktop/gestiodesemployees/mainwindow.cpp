@@ -1,8 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include "employe.h"
 #include <QMessageBox>
 #include <QIntValidator>
+
 //#include <QDebug>
 //#include <QTableWidget>
 //#include <QRegExpValidator>
@@ -38,24 +40,19 @@ Employe E(id,nom,prenom,fonction,age,sexe,annee_recrutement,absence,heure_de_tra
 bool test=E.ajouter();
 QMessageBox msgBox;
 if(test)
-{ msgBox.setText("Ajout avec suces.");
+{ msgBox.setText("Echec d'ajout");
     ui->tab_employe->setModel(E.afficher());
 }
     else
-        msgBox.setText("Echec d'ajout");
+        msgBox.setText("Ajout avec succes");
     msgBox.exec();
 }
-
-
-
-
-
 
 void MainWindow::on_pushButton_clicked()
 {
     Employe E1;
     E1.setid(ui->le_id_supp->text().toInt());
-  bool test=E1.Supprimer(E1.getid());
+    bool test=E1.Supprimer(E1.getid());
   QMessageBox msgBox;
   if(test)
   { msgBox.setText("Suppression avec succes.");
@@ -63,40 +60,35 @@ void MainWindow::on_pushButton_clicked()
   }
   else
        msgBox.setText("Echec de suppression");
-  msgBox.exec();
+       msgBox.exec();
 }
 
 void MainWindow::on_pb_modifier_clicked()
 {
-    int id=ui->le_id->text().toInt();
-    QString nom=ui->le_nom->text();
-    QString prenom=ui->le_prenom->text();
-     QString fonction=ui->le_fonction->text();
-    int age=ui->le_age->text().toInt();
-       QString sexe=ui->le_sexe->text();
-    int annee_recrutement=ui->le_annee_recrutement->text().toInt();
-    int absence =ui->le_absence->text().toInt();
-    int heure_de_travail=ui->le_heure_de_travail->text().toInt();
+    int id=ui->le_id_modifier->text().toInt();
+    QString nom=ui->le_nom_modifier->text();
+    QString prenom=ui->le_prenom_modifier->text();
+     QString fonction=ui->le_fonction_modifier->text();
+    int age=ui->le_age_modifier->text().toInt();
+       QString sexe=ui->le_sexe_modifier->text();
+    int annee_recrutement=ui->le_annee_recrutement_modifier->text().toInt();
+    int absence =ui->le_absence_modifier->text().toInt();
+    int heure_de_travail=ui->le_heure_de_travail_modifier->text().toInt();
 Employe E(id,nom,prenom,fonction,age,sexe,annee_recrutement,absence,heure_de_travail);
 
-    bool test=E.Modifier();
+    bool test=E.Modifier(id);
            QMessageBox msgbox;
            if(test)
-               {msgbox.setText("Modification avec succes.");
-                   ui->tab_employe->setModel(E.afficher());
-                   ui->le_id_modifier->setText("");
-                   ui->le_nom_modifier->setText("");
-                   ui->le_prenom_modifier->setText("");
-                   ui->le_fonction_modifier->setText("");
-                   ui->le_age_modifier->setText("");
-                   ui->le_sexe_modifier->setText("");
-                   ui->le_annee_recrutement_modifier->setText("");
-                   ui->le_absence_modifier->setText("");
-                   ui->le_heure_de_travail_modifier->setText("");
+               {
+               QMessageBox::information(nullptr, QObject::tr("DONE"),
+               QObject::tr("Modified Successfully !"), QMessageBox::Ok);
 
                }
                else
-                   msgbox.setText("Echec de modification");
-               msgbox.exec();
+           {
+                  QMessageBox::information(nullptr, QObject::tr("ERROR"),
+                  QObject::tr("Modification Failed !"), QMessageBox::Ok);
+           }
+           ui->tab_employe->setModel(E.afficher());
 
 }
