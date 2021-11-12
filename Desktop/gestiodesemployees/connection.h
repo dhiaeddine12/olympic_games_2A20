@@ -10,8 +10,8 @@ class Connection
 public:
     Connection();
     bool createconnect();
-    bool ouvrirConnexion();
-    void fermerConnection();
+    //bool ouvrirConnexion();
+   // void fermerConnection();
 };
 
 #endif // CONNECTION_H

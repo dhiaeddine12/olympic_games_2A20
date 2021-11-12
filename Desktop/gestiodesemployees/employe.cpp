@@ -2,13 +2,16 @@
 #include "employe.h"
 #include<QSqlQuery>
 #include<QtDebug>
+#include <QObject>
+
 Employe::Employe()
 {
 id=0; nom=" "; prenom=" ";fonction=" ";age=0; sexe=" ";  annee_recrutement=0; absence=0; heure_de_travail=0;
 
 }
 Employe::Employe(int id,QString nom,QString prenom,QString fonction,int age,QString sexe,int annee_recrutement,int absence,int heure_de_travail)
-{ this->id=id;this->nom=nom; this->prenom=prenom;this->fonction=fonction;this->age=age;this->sexe=sexe; this->annee_recrutement=annee_recrutement; this->absence=absence; this->heure_de_travail=heure_de_travail;    }
+{
+this->id=id;this->nom=nom; this->prenom=prenom;this->fonction=fonction;this->age=age;this->sexe=sexe; this->annee_recrutement=annee_recrutement; this->absence=absence; this->heure_de_travail=heure_de_travail;    }
 int Employe::getid(){return id;}
 QString Employe::getnom(){return nom;}
 QString Employe::getprenom(){return prenom;}

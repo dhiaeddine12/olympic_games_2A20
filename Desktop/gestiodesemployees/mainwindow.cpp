@@ -6,6 +6,7 @@
 //#include <QDebug>
 //#include <QTableWidget>
 //#include <QRegExpValidator>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

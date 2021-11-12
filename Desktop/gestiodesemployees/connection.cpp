@@ -16,12 +16,12 @@ db.setPassword("souha2021");//inserer mot de passe de cet utilisateur
 
 if (db.open())
 
-    return true;
+     test=true;
 
     return  test;
 }
 
-bool Connection::ouvrirConnexion()
+/*bool Connection::ouvrirConnexion()
 {
 
   if (db.open())
@@ -29,4 +29,8 @@ bool Connection::ouvrirConnexion()
   else
       return false;
 }
-void Connection::fermerConnection(){db.close();}
+void Connection::fermerConnection()
+{
+    db.close();
+}
+*/
