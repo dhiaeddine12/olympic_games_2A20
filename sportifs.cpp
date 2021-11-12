@@ -44,7 +44,7 @@ bool sportifs::supprimer(int id)
 {
     QSqlQuery query;
     QString id_string=QString::number(id);
-    QString age_string=QString::number(age);
+
           query.prepare("Delete from SPORTIF where id=:id");
           query.bindValue(0,id );
 
