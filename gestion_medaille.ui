@@ -2,23 +2,39 @@
 <ui version="4.0">
  <class>gestion_medaille</class>
  <widget class="QDialog" name="gestion_medaille">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
-    <height>380</height>
+    <width>739</width>
+    <height>376</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion des médaille</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../free-medal-icon-1369-thumb.png</normaloff>../../free-medal-icon-1369-thumb.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>781</width>
+     <width>741</width>
      <height>381</height>
     </rect>
    </property>
@@ -32,53 +48,53 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>60</y>
        <width>81</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>pays</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Pays&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>110</y>
-       <width>111</width>
+       <width>151</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>TYPE DE MEDAILLE</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Type de medaille&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>16</x>
+       <x>10</x>
        <y>180</y>
-       <width>81</width>
-       <height>20</height>
+       <width>161</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>TYPE DE SPORT</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Type de sport&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>16</x>
+       <x>10</x>
        <y>240</y>
-       <width>121</width>
+       <width>181</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>ANNEE D'OBTENTION</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Année d'obtention&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_ANNEE_OBTENTION">
@@ -137,14 +153,14 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>20</y>
-       <width>47</width>
-       <height>14</height>
+       <width>121</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>ID</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;ID                            &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_ID_M">
@@ -165,8 +181,8 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>270</y>
+       <x>400</x>
+       <y>280</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -208,16 +224,16 @@
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; pays&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Pays&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>30</y>
-       <width>511</width>
-       <height>221</height>
+       <x>200</x>
+       <y>40</y>
+       <width>517</width>
+       <height>222</height>
       </rect>
      </property>
     </widget>
@@ -250,14 +266,14 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>16</x>
        <y>170</y>
-       <width>47</width>
-       <height>14</height>
+       <width>51</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>ID</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;ID&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -298,40 +314,40 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>20</x>
        <y>130</y>
-       <width>111</width>
+       <width>161</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>TYPE DE MEDAILLE</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Type de medaille&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>20</x>
        <y>80</y>
        <width>81</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>pays</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Pays&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>46</x>
+       <x>20</x>
        <y>250</y>
-       <width>121</width>
+       <width>171</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>ANNEE D'OBTENTION</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Année d'obtention&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_pays_3">
@@ -347,27 +363,27 @@
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>46</x>
+       <x>20</x>
        <y>200</y>
-       <width>81</width>
+       <width>171</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>TYPE DE SPORT</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Type de sport&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>20</x>
        <y>40</y>
-       <width>47</width>
-       <height>14</height>
+       <width>41</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>ID</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;ID&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_idM_3">

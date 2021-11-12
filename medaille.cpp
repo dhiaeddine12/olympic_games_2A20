@@ -21,7 +21,7 @@ medaille::medaille(int ID_M, QString TYPE_MEDAILLE ,int ANNEE_OBTENTION, QString
 };
 bool medaille::ajouter()
 {
-     bool test=false;
+
    QSqlQuery query;
     QString ID_M_S = QString::number(ID_M);
     QString ANNEE_S = QString::number(ANNEE_OBTENTION);
@@ -36,18 +36,17 @@ bool medaille::ajouter()
        return query.exec();
 
 
-      return test;
+
 };
 
 bool medaille::supprimer(int id)
 {
-    bool test=false;
+
     QSqlQuery query;
     QString res=QString::number(id);
     query.prepare("Delete from MEDAILLE where ID_M = :ID_M");
     query.bindValue(":ID_M",res);
     return  query.exec();
-    return test;
 };
 QSqlQueryModel * medaille::afficher()
 {

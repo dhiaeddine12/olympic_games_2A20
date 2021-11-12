@@ -43,6 +43,7 @@ void gestion_medaille::on_pushButton_ajouter_clicked()
                                          QObject::tr("ajout effectué.\n"
                                                      "click Cancel to exit."),QMessageBox::Cancel);
             }
+
             else
                 QMessageBox::critical(nullptr,QObject::tr("not ok"),
                            QObject::tr("ajout non effectué.\n"
