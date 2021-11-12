@@ -8,7 +8,7 @@ class Employe
 {
 public:
     Employe();
-    Employe(int,int, int, int, int, QString, QString, QString, QString);
+    Employe(int,QString,QString,QString,int,QString,int,int,int);
     int getid();
     int getage();
     int getannee_recrutement();
@@ -28,8 +28,10 @@ public:
     void setsexe(QString);
     void setfonction(QString);
 
-    bool ajouter();
-    QSqlQueryModel* afficher();
+      bool ajouter();
+      QSqlQueryModel* afficher();
+      bool Supprimer(int);
+      bool Modifier();
 
 
 
