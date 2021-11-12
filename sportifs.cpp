@@ -40,6 +40,21 @@ bool sportifs::ajouter()
    return query.exec();
 }
 
+QSqlQueryModel* sportifs::afficher()
+{
+   QSqlQueryModel* model=new QSqlQueryModel();
+
+        model->setQuery("SELECT* FROM SPORTIF");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+
+   return model;
+
+}
+
 bool sportifs::supprimer(int id)
 {
     QSqlQuery query;
@@ -55,20 +70,6 @@ bool sportifs::supprimer(int id)
 
 
 
-QSqlQueryModel* sportifs::afficher()
-{
-   QSqlQueryModel* model=new QSqlQueryModel();
-
-        model->setQuery("SELECT* FROM SPORTIF");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
-        model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
-
-   return model;
-
-}
 
 bool sportifs::modifier(int)
 

@@ -38,6 +38,12 @@ if (test)
 }
 else
     msgBox.setText("ajout avec succes.");
+
+if(ui->le_id->text().isEmpty()||ui->le_nom->text().isEmpty()||ui->le_prenom->text().isEmpty()||ui->le_typesport->text().isEmpty()||ui->le_age->text().isEmpty())
+          {
+              QMessageBox::information(nullptr, QObject::tr("ERROR"),
+              QObject::tr("Please Fill All Data"), QMessageBox::Ok);
+          }
    msgBox.exec();
 
 }
@@ -54,6 +60,12 @@ void MainWindow::on_pb_supprimer_clicked()
     }
     else
         msgBox.setText("Echec de suppression");
+
+    if(ui->le_id->text().isEmpty())
+              {
+                  QMessageBox::information(nullptr, QObject::tr("ERROR"),
+                  QObject::tr("Please Fill All Data"), QMessageBox::Ok);
+              }
        msgBox.exec();
 
 
@@ -84,4 +96,9 @@ void MainWindow::on_pb_modifier_clicked()
 
        ui->tab_sportifs->setModel(s.afficher());
 
+       if(ui->le_id->text().isEmpty()||ui->le_nom->text().isEmpty()||ui->le_prenom->text().isEmpty()||ui->le_typesport->text().isEmpty()||ui->le_age->text().isEmpty())
+                 {
+                     QMessageBox::information(nullptr, QObject::tr("ERROR"),
+                     QObject::tr("Please Fill All Data"), QMessageBox::Ok);
+                 }
 }
