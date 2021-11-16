@@ -22,6 +22,10 @@ public:
    QSqlQueryModel* afficher();
    bool supprimer(int);
    bool modifier(int);
+   QSqlQueryModel* rechercher(QString);
+   QSqlQueryModel* rechercher1(QString);
+   QSqlQueryModel* rechercher2(int);
+
 private :
     int id,age;
     QString nom,prenom,type_sport;

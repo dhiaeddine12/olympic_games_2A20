@@ -24,6 +24,12 @@ private slots:
 
     void on_pb_modifier_clicked();
 
+    void on_pb_rechercher_clicked();
+
+    void on_pb_rechercher2_clicked();
+
+    void on_pb_rechercher1_clicked();
+
 private:
     Ui::MainWindow *ui;
     sportifs s;

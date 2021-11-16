@@ -86,3 +86,49 @@ bool sportifs::modifier(int)
 
 }
 
+QSqlQueryModel* sportifs::rechercher(QString nom)
+ {
+
+     QSqlQuery query ;
+     QSqlQueryModel* model=new QSqlQueryModel();
+
+    query.prepare("select * from SPORTIF where nom=:nom");
+    query.bindValue(":nom",nom);
+    query.exec();
+    model->setQuery(query);
+
+    return model;
+
+ }
+
+QSqlQueryModel* sportifs::rechercher1(QString type_sport)
+ {
+
+     QSqlQuery query ;
+     QSqlQueryModel* model=new QSqlQueryModel();
+
+    query.prepare("select * from SPORTIF where type_sport=:type_sport");
+    query.bindValue(":type_sport",type_sport);
+    query.exec();
+    model->setQuery(query);
+
+    return model;
+
+ }
+
+QSqlQueryModel* sportifs::rechercher2(int id)
+ {
+
+     QSqlQuery query ;
+     QSqlQueryModel* model=new QSqlQueryModel();
+
+    query.prepare("select * from SPORTIF where id=:id");
+    query.bindValue(":id",id);
+    query.exec();
+    model->setQuery(query);
+
+    return model;
+
+ }
+
+

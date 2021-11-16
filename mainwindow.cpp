@@ -33,8 +33,9 @@ bool test=s.ajouter();
 QMessageBox msgBox;
 if (test)
 {
+    ui->tab_sportifs->setModel(s.afficher());
     msgBox.setText("echec d ajout");
-     ui->tab_sportifs->setModel(s.afficher());
+
 }
 else
     msgBox.setText("ajout avec succes.");
@@ -55,8 +56,9 @@ void MainWindow::on_pb_supprimer_clicked()
     QMessageBox msgBox;
     if (test)
     {
-        msgBox.setText("suppression avec succes.");
         ui->tab_sportifs->setModel(s.afficher());
+        msgBox.setText("suppression avec succes.");
+
     }
     else
         msgBox.setText("Echec de suppression");
@@ -101,4 +103,26 @@ void MainWindow::on_pb_modifier_clicked()
                      QMessageBox::information(nullptr, QObject::tr("ERROR"),
                      QObject::tr("Please Fill All Data"), QMessageBox::Ok);
                  }
+}
+
+void MainWindow::on_pb_rechercher_clicked()
+{
+    QString nom= ui->le_nom_r->text();
+     ui->tabler->setModel(s.rechercher(nom));
+              sportifs s;
+}
+
+
+void MainWindow::on_pb_rechercher2_clicked()
+{
+    int id= ui->le_id_r->text().toInt();
+     ui->tabler->setModel(s.rechercher2(id));
+              sportifs s;
+}
+
+void MainWindow::on_pb_rechercher1_clicked()
+{
+    QString type_sport= ui->le_type_sport_r->text();
+     ui->tabler->setModel(s.rechercher1(type_sport));
+              sportifs s;
 }

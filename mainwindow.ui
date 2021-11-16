@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>70</x>
       <y>30</y>
-      <width>651</width>
-      <height>351</height>
+      <width>701</width>
+      <height>391</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -176,8 +176,8 @@
        <rect>
         <x>-5</x>
         <y>0</y>
-        <width>651</width>
-        <height>321</height>
+        <width>701</width>
+        <height>361</height>
        </rect>
       </property>
       <property name="text">
@@ -197,10 +197,10 @@
      <widget class="QTableView" name="tab_sportifs">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>621</width>
-        <height>311</height>
+        <x>0</x>
+        <y>0</y>
+        <width>701</width>
+        <height>361</height>
        </rect>
       </property>
      </widget>
@@ -250,8 +250,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>651</width>
-        <height>321</height>
+        <width>701</width>
+        <height>361</height>
        </rect>
       </property>
       <property name="text">
@@ -416,8 +416,8 @@
        <rect>
         <x>0</x>
         <y>-20</y>
-        <width>651</width>
-        <height>341</height>
+        <width>691</width>
+        <height>381</height>
        </rect>
       </property>
       <property name="text">
@@ -429,6 +429,129 @@
      </widget>
      <zorder>label_12</zorder>
      <zorder>groupBox_2</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>rechercher un sportif</string>
+     </attribute>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>70</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>70</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>type_sport</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_nom_r">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_id_r">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>110</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_type_sport_r">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>110</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tabler">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>511</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_rechercher">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_rechercher2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>140</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_rechercher1">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>140</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rechercher</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
