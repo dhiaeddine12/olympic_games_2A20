@@ -6,11 +6,24 @@
 #include <QIntValidator>
 #include <QPrinter>
 #include <QPrintDialog>
+#include "login.h"
+#include "login_bd.h"
+#include "connection.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    login_bd l;
+     Connection c;
+       l.fermerConnexion1();
+
+
+           c.createconnect();
+
+
+           bool test;
+           test=c.ouvrirConnexion();
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(0, 9999999, this));
     ui->tab_sportifs->setModel(s.afficher());

@@ -22,4 +22,11 @@ test=true;
     return  test;
 }
 
+bool Connection::ouvrirConnexion(){
+    if (db.open())
+        return true ;
+    else
+        return false;
+}
 
+void Connection::fermerConnexion(){db.close();}

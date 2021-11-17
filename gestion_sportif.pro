@@ -1,4 +1,5 @@
-QT       += core gui sql printsupport
+QT       += core gui sql printsupport \
+    quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,17 +18,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    login.cpp \
+    login_bd.cpp \
     main.cpp \
     mainwindow.cpp \
     sportifs.cpp
 
 HEADERS += \
     connection.h \
+    login.h \
+    login.h \
+    login.h \
+    login_bd.h \
     mainwindow.h \
+    signup.h \
     sportifs.h
 
 FORMS += \
-    gestiondessportifs.ui \
+    gestionsportifs.ui \
+    login.ui \
     mainwindow.ui
 
 # Default rules for deployment.

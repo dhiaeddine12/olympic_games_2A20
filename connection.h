@@ -12,6 +12,8 @@ private:
 public:
     Connection();//
     bool createconnect();
+    bool ouvrirConnexion();
+       void fermerConnexion();
 };
 
 #endif // CONNECTION_H
