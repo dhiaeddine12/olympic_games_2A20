@@ -20,11 +20,14 @@ public:
     void setage(int);
     bool ajouter();
    QSqlQueryModel* afficher();
+   QSqlQueryModel* afficher_id(int);
+   QSqlQueryModel* afficher_nom(QString);
+   QSqlQueryModel* afficher_type_sport(QString);
    bool supprimer(int);
    bool modifier(int);
-   QSqlQueryModel* rechercher(QString);
-   QSqlQueryModel* rechercher1(QString);
-   QSqlQueryModel* rechercher2(int);
+   bool rechercher_nom(QString);
+   bool rechercher_type_sport(QString);
+   bool rechercher_id(int);
 
 private :
     int id,age;

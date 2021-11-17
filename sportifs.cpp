@@ -2,6 +2,7 @@
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QObject>
+#include <QMessageBox>
 sportifs::sportifs()
 {
    id=0; age=0; nom=" "; prenom=" "; type_sport=" ";
@@ -55,6 +56,52 @@ QSqlQueryModel* sportifs::afficher()
 
 }
 
+QSqlQueryModel* sportifs::afficher_id(int id)
+{
+    QSqlQuery query ;
+        QSqlQueryModel* model=new QSqlQueryModel();
+
+       query.prepare("select * from SPORTIF where id=:id");
+       query.bindValue(":id",id);
+       query.exec();
+       model->setQuery(query);
+
+       return model;
+
+
+}
+
+QSqlQueryModel* sportifs::afficher_nom(QString nom)
+{
+    {
+
+         QSqlQuery query ;
+         QSqlQueryModel* model=new QSqlQueryModel();
+
+        query.prepare("select * from SPORTIF where nom=:nom");
+        query.bindValue(":nom",nom);
+        query.exec();
+        model->setQuery(query);
+
+        return model;
+
+     }
+}
+
+QSqlQueryModel* sportifs::afficher_type_sport(QString type_sport)
+{
+    QSqlQuery query ;
+         QSqlQueryModel* model=new QSqlQueryModel();
+
+        query.prepare("select * from SPORTIF where type_sport=:type_sport");
+        query.bindValue(":type_sport",type_sport);
+        query.exec();
+        model->setQuery(query);
+
+        return model;
+
+}
+
 bool sportifs::supprimer(int id)
 {
     QSqlQuery query;
@@ -86,49 +133,64 @@ bool sportifs::modifier(int)
 
 }
 
-QSqlQueryModel* sportifs::rechercher(QString nom)
- {
+bool sportifs::rechercher_nom(QString nom)
+{
+    QMessageBox msgBox;
+    QSqlQuery query;
 
-     QSqlQuery query ;
-     QSqlQueryModel* model=new QSqlQueryModel();
+    query.prepare("SELECT * FROM SPORTIF WHERE nom= :nom");
+    query.bindValue(":nom", nom);
+    if (query.exec() && query.next())
+    {
+            return true;
+    }
+    else
+    {
 
-    query.prepare("select * from SPORTIF where nom=:nom");
-    query.bindValue(":nom",nom);
-    query.exec();
-    model->setQuery(query);
+        msgBox.setText("sportif n existe pas");
+        msgBox.exec();
+        return false;
+    }
+}
 
-    return model;
+bool sportifs::rechercher_type_sport(QString type_sport)
+{
+    QMessageBox msgBox;
+    QSqlQuery query;
 
- }
+    query.prepare("SELECT * FROM SPORTIF WHERE type_sport= :type_sport");
+    query.bindValue(":type_sport", type_sport);
+    if (query.exec() && query.next())
+    {
+            return true;
+    }
+    else
+    {
 
-QSqlQueryModel* sportifs::rechercher1(QString type_sport)
- {
+        msgBox.setText("sport n existe pas");
+        msgBox.exec();
+        return false;
+    }
+}
 
-     QSqlQuery query ;
-     QSqlQueryModel* model=new QSqlQueryModel();
+bool sportifs::rechercher_id(int id)
+{
+    QMessageBox msgBox;
+    QSqlQuery query;
 
-    query.prepare("select * from SPORTIF where type_sport=:type_sport");
-    query.bindValue(":type_sport",type_sport);
-    query.exec();
-    model->setQuery(query);
+    query.prepare("SELECT * FROM SPORTIF WHERE id= :id");
+    query.bindValue(":id", id);
+    if (query.exec() && query.next())
+    {
+            return true;
+    }
+    else
+    {
 
-    return model;
-
- }
-
-QSqlQueryModel* sportifs::rechercher2(int id)
- {
-
-     QSqlQuery query ;
-     QSqlQueryModel* model=new QSqlQueryModel();
-
-    query.prepare("select * from SPORTIF where id=:id");
-    query.bindValue(":id",id);
-    query.exec();
-    model->setQuery(query);
-
-    return model;
-
- }
+        msgBox.setText("id n existe pas");
+        msgBox.exec();
+        return false;
+    }
+}
 
 

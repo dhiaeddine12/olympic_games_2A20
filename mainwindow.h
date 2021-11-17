@@ -26,9 +26,23 @@ private slots:
 
     void on_pb_rechercher_clicked();
 
-    void on_pb_rechercher2_clicked();
 
-    void on_pb_rechercher1_clicked();
+
+
+
+
+
+
+
+    void on_pb_rechercher_id_clicked();
+
+    void on_pb_rechercher_type_sport_clicked();
+
+    void on_pb_trier_n_clicked();
+
+    void on_pb_trier_i_clicked();
+
+    void on_pb_trier_a_clicked();
 
 private:
     Ui::MainWindow *ui;

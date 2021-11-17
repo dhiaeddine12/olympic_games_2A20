@@ -107,22 +107,86 @@ void MainWindow::on_pb_modifier_clicked()
 
 void MainWindow::on_pb_rechercher_clicked()
 {
+     sportifs s;
     QString nom= ui->le_nom_r->text();
-     ui->tabler->setModel(s.rechercher(nom));
-              sportifs s;
+     ui->tabler->setModel(s.afficher_nom(nom));
+
+
+
 }
 
 
-void MainWindow::on_pb_rechercher2_clicked()
+
+
+void MainWindow::on_pb_rechercher_id_clicked()
 {
-    int id= ui->le_id_r->text().toInt();
-     ui->tabler->setModel(s.rechercher2(id));
-              sportifs s;
+    sportifs s;
+   int id= ui->le_id_r->text().toInt();;
+    ui->tabler->setModel(s.afficher_id(id));
+
 }
 
-void MainWindow::on_pb_rechercher1_clicked()
+void MainWindow::on_pb_rechercher_type_sport_clicked()
 {
-    QString type_sport= ui->le_type_sport_r->text();
-     ui->tabler->setModel(s.rechercher1(type_sport));
-              sportifs s;
+    sportifs s;
+   QString type_sport= ui->le_nom_r->text();
+    ui->tabler->setModel(s.afficher_type_sport(type_sport));
+
+}
+
+void MainWindow::on_pb_trier_n_clicked()
+{
+    QMessageBox msgBox ;
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+               model->setQuery("SELECT * FROM SPORTIF order by nom ASC");
+               model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+               model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+               model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+               model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+               model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+
+
+               ui->tabler->setModel(model);
+               ui->tabler->show();
+               msgBox.setText("Tri avec succès.");
+               msgBox.exec();
+}
+
+void MainWindow::on_pb_trier_i_clicked()
+{
+    QMessageBox msgBox ;
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+               model->setQuery("SELECT * FROM SPORTIF order by id ASC");
+               model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+               model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+               model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+               model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+               model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+
+
+               ui->tabler->setModel(model);
+               ui->tabler->show();
+               msgBox.setText("Tri avec succès.");
+               msgBox.exec();
+}
+
+void MainWindow::on_pb_trier_a_clicked()
+{
+    QMessageBox msgBox ;
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+               model->setQuery("SELECT * FROM SPORTIF order by age ASC");
+               model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+               model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+               model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+               model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+               model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+
+
+               ui->tabler->setModel(model);
+               ui->tabler->show();
+               msgBox.setText("Tri avec succès.");
+               msgBox.exec();
 }
