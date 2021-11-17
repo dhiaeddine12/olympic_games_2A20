@@ -1,5 +1,5 @@
 #include "login_bd.h"
-
+#include <QtDebug>
 login_bd::login_bd()
 {
 
