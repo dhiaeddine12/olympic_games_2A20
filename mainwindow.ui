@@ -18,13 +18,13 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>50</y>
+      <y>60</y>
       <width>801</width>
       <height>471</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -220,8 +220,8 @@
      <widget class="QPushButton" name="pb_print">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>210</y>
+        <x>610</x>
+        <y>360</y>
         <width>93</width>
         <height>28</height>
        </rect>

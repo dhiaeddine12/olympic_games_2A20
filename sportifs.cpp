@@ -60,15 +60,11 @@ QSqlQueryModel* sportifs::afficher_id(int id)
 {
     QSqlQuery query ;
         QSqlQueryModel* model=new QSqlQueryModel();
-
        query.prepare("select * from SPORTIF where id=:id");
        query.bindValue(":id",id);
        query.exec();
        model->setQuery(query);
-
        return model;
-
-
 }
 
 QSqlQueryModel* sportifs::afficher_nom(QString nom)
@@ -77,14 +73,11 @@ QSqlQueryModel* sportifs::afficher_nom(QString nom)
 
          QSqlQuery query ;
          QSqlQueryModel* model=new QSqlQueryModel();
-
         query.prepare("select * from SPORTIF where nom=:nom");
         query.bindValue(":nom",nom);
         query.exec();
         model->setQuery(query);
-
         return model;
-
      }
 }
 
@@ -92,14 +85,11 @@ QSqlQueryModel* sportifs::afficher_type_sport(QString type_sport)
 {
     QSqlQuery query ;
          QSqlQueryModel* model=new QSqlQueryModel();
-
         query.prepare("select * from SPORTIF where type_sport=:type_sport");
         query.bindValue(":type_sport",type_sport);
         query.exec();
         model->setQuery(query);
-
         return model;
-
 }
 
 bool sportifs::supprimer(int id)
@@ -146,7 +136,6 @@ bool sportifs::rechercher_nom(QString nom)
     }
     else
     {
-
         msgBox.setText("sportif n existe pas");
         msgBox.exec();
         return false;
@@ -157,7 +146,6 @@ bool sportifs::rechercher_type_sport(QString type_sport)
 {
     QMessageBox msgBox;
     QSqlQuery query;
-
     query.prepare("SELECT * FROM SPORTIF WHERE type_sport= :type_sport");
     query.bindValue(":type_sport", type_sport);
     if (query.exec() && query.next())
@@ -166,7 +154,6 @@ bool sportifs::rechercher_type_sport(QString type_sport)
     }
     else
     {
-
         msgBox.setText("sport n existe pas");
         msgBox.exec();
         return false;
@@ -177,7 +164,6 @@ bool sportifs::rechercher_id(int id)
 {
     QMessageBox msgBox;
     QSqlQuery query;
-
     query.prepare("SELECT * FROM SPORTIF WHERE id= :id");
     query.bindValue(":id", id);
     if (query.exec() && query.next())
@@ -193,4 +179,17 @@ bool sportifs::rechercher_id(int id)
     }
 }
 
+bool sportifs::ajouter1()
+{
 
+    QSqlQuery query;
+    QString id_string=QString::number(id);
+    QString age_string=QString::number(age);
+          query.prepare("INSERT INTO LOGIN(LOGIN,PASSWORD) "
+                        "VALUES (:LOGIN, :PASSWORD)");
+          query.bindValue(":LOGIN",LOGIN);
+           query.bindValue(":PASSWORD",PASSWORD);
+          query.exec();
+
+   return query.exec();
+}

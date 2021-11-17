@@ -24,8 +24,13 @@ MainWindow::MainWindow(QWidget *parent)
 
            bool test;
            test=c.ouvrirConnexion();
+
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(0, 9999999, this));
+    ui->le_id_r->setValidator( new QIntValidator(0, 9999999, this));
+     ui->le_id_supp->setValidator( new QIntValidator(0, 9999999, this));
+    ui->le_age->setValidator( new QIntValidator(0, 99, this));
+    ui->le_age_2->setValidator( new QIntValidator(0, 99, this));
     ui->tab_sportifs->setModel(s.afficher());
 }
 
@@ -78,7 +83,7 @@ void MainWindow::on_pb_supprimer_clicked()
     else
         msgBox.setText("Echec de suppression");
 
-    if(ui->le_id->text().isEmpty())
+    if(ui->le_id_supp->text().isEmpty())
               {
                   QMessageBox::information(nullptr, QObject::tr("ERROR"),
                   QObject::tr("Please Fill All Data"), QMessageBox::Ok);
@@ -125,9 +130,6 @@ void MainWindow::on_pb_rechercher_clicked()
      sportifs s;
     QString nom= ui->le_nom_r->text();
      ui->tabler->setModel(s.afficher_nom(nom));
-
-
-
 }
 
 

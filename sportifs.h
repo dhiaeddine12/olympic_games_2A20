@@ -19,6 +19,7 @@ public:
     void settype_sport(QString);
     void setage(int);
     bool ajouter();
+    bool ajouter1();
    QSqlQueryModel* afficher();
    QSqlQueryModel* afficher_id(int);
    QSqlQueryModel* afficher_nom(QString);
@@ -28,10 +29,11 @@ public:
    bool rechercher_nom(QString);
    bool rechercher_type_sport(QString);
    bool rechercher_id(int);
-
+  QString LOGIN,PASSWORD;
 private :
     int id,age;
     QString nom,prenom,type_sport;
+
 };
 
 #endif // SPORTIFS_H
