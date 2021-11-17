@@ -4,6 +4,8 @@
 #include "sportifs.h"
 #include <QMessageBox>
 #include <QIntValidator>
+#include <QPrinter>
+#include <QPrintDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -189,4 +191,33 @@ void MainWindow::on_pb_trier_a_clicked()
                ui->tabler->show();
                msgBox.setText("Tri avec succès.");
                msgBox.exec();
+}
+
+void MainWindow::on_pb_update_clicked()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+         model->setQuery("SELECT* FROM SPORTIF");
+         model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+         model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+         model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+           model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+         model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+
+         ui->tab_sportifs->setModel(model);
+         ui->tab_sportifs->show();
+
+}
+
+
+
+void MainWindow::on_pb_print_clicked()
+{
+
+    QPrinter printer;
+    printer.setPrinterName("Canon LBP2900");
+    QPrintDialog dialog(&printer,this);
+    if(dialog.exec()== QDialog::Rejected) return;
+ ui->textEdit->print(&printer);
+
 }

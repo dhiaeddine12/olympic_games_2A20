@@ -44,6 +44,12 @@ private slots:
 
     void on_pb_trier_a_clicked();
 
+    void on_pb_update_clicked();
+
+
+
+    void on_pb_print_clicked();
+
 private:
     Ui::MainWindow *ui;
     sportifs s;
