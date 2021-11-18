@@ -5,6 +5,11 @@
 #include <QMessageBox>
 #include <QValidator>
 #include <QIntValidator>
+#include <QPrintDialog>
+#include<QFileDialog>
+#include<QPrinter>
+#include<QTextDocument>
+#include<QTextStream>
 
 #include "ui_mainwindow.h"
 
@@ -13,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     ui->table_materiel->setModel(m.afficher());
 
     ui->id->setValidator (new QIntValidator(0,99999999, this));
@@ -69,6 +75,7 @@ void MainWindow::on_pushButton_4_clicked()
 
 }
 
+
 void MainWindow::on_pushButton_clicked()
 {
     materiel m;
@@ -90,8 +97,6 @@ void MainWindow::on_pushButton_clicked()
        }
       }
 }
-
-
 
 
 
@@ -193,4 +198,71 @@ void MainWindow::on_pushButton_11_clicked()
            ui->table_materiel->show();
            msgBox.setText("Tri avec succès.");
            msgBox.exec();
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString strStream;
+                  QTextStream out(&strStream);
+
+                  const int rowCount = ui->table_materiel->model()->rowCount();
+                  const int columnCount = ui->table_materiel->model()->columnCount();
+
+                  out <<  "<html>\n"
+                      "<head>\n"
+                      "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                      <<  QString("<title>%1</title>\n").arg("strTitle")
+                      <<  "</head>\n"
+                      "<body bgcolor=#ffffff link=#5000A0>\n"
+
+                     //     "<align='right'> " << datefich << "</align>"
+                      "<center> <H1>Liste des Materiels </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+                  // headers
+                  out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+                  for (int column = 0; column < columnCount; column++)
+                      if (!ui->table_materiel->isColumnHidden(column))
+                          out << QString("<th>%1</th>").arg(ui->table_materiel->model()->headerData(column, Qt::Horizontal).toString());
+                  out << "</tr></thead>\n";
+
+                  // data table
+                  for (int row = 0; row < rowCount; row++) {
+                      out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                      for (int column = 0; column < columnCount; column++) {
+                          if (!ui->table_materiel->isColumnHidden(column)) {
+                              QString data = ui->table_materiel->model()->data(ui->table_materiel->model()->index(row, column)).toString().simplified();
+                              out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                          }
+                      }
+                      out << "</tr>\n";
+                  }
+                  out <<  "</table> </center>\n"
+                      "</body>\n"
+                      "</html>\n";
+
+            QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+              if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+             QPrinter printer (QPrinter::PrinterResolution);
+              printer.setOutputFormat(QPrinter::PdfFormat);
+             printer.setPaperSize(QPrinter::A4);
+            printer.setOutputFileName(fileName);
+
+             QTextDocument doc;
+              doc.setHtml(strStream);
+              doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+              doc.print(&printer);
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    QPrinter printer;
+
+    printer.setPrinterName("desiered printer name");
+
+  QPrintDialog dialog(&printer,this);
+
+    if(dialog.exec()== QDialog::Rejected)
+
+        return;
 }
