@@ -10,6 +10,7 @@ private:
     QSqlDatabase db;
 
 public:
+
     Connection();//
     bool createconnect();
     bool ouvrirConnexion();

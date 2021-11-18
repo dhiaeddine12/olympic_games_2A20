@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QtDebug>
 #include "sportifs.h"
 #include <QMessageBox>
 #include <QIntValidator>
@@ -32,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->le_age->setValidator( new QIntValidator(0, 99, this));
     ui->le_age_2->setValidator( new QIntValidator(0, 99, this));
     ui->tab_sportifs->setModel(s.afficher());
+   ui->comboBox_id_supp->setModel(s.affichervaleur("id"));
+
 }
 
 MainWindow::~MainWindow()
@@ -71,24 +73,24 @@ if(ui->le_id->text().isEmpty()||ui->le_nom->text().isEmpty()||ui->le_prenom->tex
 
 void MainWindow::on_pb_supprimer_clicked()
 {
-    sportifs s1; s1.setid(ui->le_id_supp->text().toInt());
+    sportifs s1;
+    s1.setid(ui->le_id_supp->text().toInt());
     bool test=s1.supprimer(s1.getid());
-    QMessageBox msgBox;
+
     if (test)
     {
         ui->tab_sportifs->setModel(s.afficher());
-        msgBox.setText("suppression avec succes.");
+        QMessageBox::information(this,"suprresion","suppresion avec succes");
 
     }
     else
-        msgBox.setText("Echec de suppression");
+         QMessageBox::warning(this,"suppression","id introuvable");
 
     if(ui->le_id_supp->text().isEmpty())
               {
-                  QMessageBox::information(nullptr, QObject::tr("ERROR"),
-                  QObject::tr("Please Fill All Data"), QMessageBox::Ok);
+                   QMessageBox::information(this,"error","please fill the data");
               }
-       msgBox.exec();
+
 
 
 }

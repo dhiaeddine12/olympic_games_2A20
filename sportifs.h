@@ -24,6 +24,7 @@ public:
    QSqlQueryModel* afficher_id(int);
    QSqlQueryModel* afficher_nom(QString);
    QSqlQueryModel* afficher_type_sport(QString);
+   QSqlQueryModel* affichervaleur(QString);
    bool supprimer(int);
    bool modifier(int);
    bool rechercher_nom(QString);
