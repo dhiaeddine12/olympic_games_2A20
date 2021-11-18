@@ -27,13 +27,13 @@ if(s.LOGIN == "test" && s.PASSWORD =="test" )
 
 {
 
-    QMessageBox::information(this,"login","connection correct");
+    QMessageBox::information(this,"login","login et password correct");
     mainwindow = new MainWindow(this);
        mainwindow->show();
 }
     else
 
     {
-         QMessageBox::warning(this,"login","connection correct");
+         QMessageBox::warning(this,"login","login ou password incorrect");
     }
 }
