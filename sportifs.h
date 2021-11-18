@@ -30,6 +30,7 @@ public:
    bool rechercher_nom(QString);
    bool rechercher_type_sport(QString);
    bool rechercher_id(int);
+   bool somme();
   QString LOGIN,PASSWORD;
 private :
     int id,age;

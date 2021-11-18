@@ -29,7 +29,7 @@ bool sportifs::ajouter()
     QSqlQuery query;
     QString id_string=QString::number(id);
     QString age_string=QString::number(age);
-          query.prepare("INSERT INTO SPORTIF(id,nom,prenom,type_sport,age) "
+          query.prepare("INSERT INTO SPORTIF (id,nom,prenom,type_sport,age) "
                         "VALUES (:id, :nom, :prenom, :type_sport, :age)");
           query.bindValue(":id",id_string);
           query.bindValue(":nom", nom);
@@ -183,8 +183,8 @@ bool sportifs::ajouter1()
 {
 
     QSqlQuery query;
-    QString id_string=QString::number(id);
-    QString age_string=QString::number(age);
+    //QString id_string=QString::number(id);
+    //QString age_string=QString::number(age);
           query.prepare("INSERT INTO LOGIN(LOGIN,PASSWORD) "
                         "VALUES (:LOGIN, :PASSWORD)");
           query.bindValue(":LOGIN",LOGIN);
@@ -197,7 +197,7 @@ bool sportifs::ajouter1()
 QSqlQueryModel* sportifs::affichervaleur(QString valeur)
 {
     QSqlQueryModel * model=new QSqlQueryModel();
-    QString ch="SELECT";
+    QString ch="SELECT ";
     QString query=" FROM SPORTIF";
     query=ch+valeur+query;
     model->setQuery(query);
@@ -205,3 +205,4 @@ QSqlQueryModel* sportifs::affichervaleur(QString valeur)
 
 
 }
+

@@ -27,14 +27,6 @@ private slots:
 
     void on_pb_rechercher_clicked();
 
-
-
-
-
-
-
-
-
     void on_pb_rechercher_id_clicked();
 
     void on_pb_rechercher_type_sport_clicked();
@@ -47,9 +39,9 @@ private slots:
 
     void on_pb_update_clicked();
 
-
-
     void on_pb_print_clicked();
+
+    void on_pb_somme_clicked();
 
 private:
     Ui::MainWindow *ui;
