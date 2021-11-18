@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 #include "employe.h"
+#include "connection.h"
 #include <QMessageBox>
 #include <QIntValidator>
 
@@ -91,4 +91,108 @@ Employe E(id,nom,prenom,fonction,age,sexe,annee_recrutement,absence,heure_de_tra
            }
            ui->tab_employe->setModel(E.afficher());
 
+}
+
+void MainWindow::on_Pb_recherche_nom_clicked()
+{
+    Employe E;
+    QString nom= ui->le_nom_r->text();
+    ui->tabler->setModel(E.afficher_nom(nom));
+
+}
+
+void MainWindow::on_Pb_recherche_fonction_clicked()
+{
+    Employe E;
+    QString fonction= ui->le_fonction_r->text();
+    ui->tabler->setModel(E.afficher_fonction(fonction));
+}
+
+void MainWindow::on_Pb_recherche_identifiant_clicked()
+{
+    Employe E;
+    int id= ui->le_id_r->text().toInt();
+    ui->tabler->setModel(E.afficher_id(id));
+}
+
+void MainWindow::on_Pb_trier_age_clicked()
+{
+    QMessageBox msgBox;
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYE order by age ASC");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prenom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("fonction"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("sexe"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("annee_recrutement"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("absence"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("heure_de_travail"));
+
+    ui->tabler->setModel(model);
+    ui->tabler->show();
+    msgBox.setText("Tri avec succes.");
+    msgBox.exec();
+}
+
+void MainWindow::on_Pb_trier_annee_de_recrutement_clicked()
+{
+    QMessageBox msgBox;
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYE order by annee_de_recrutement ASC");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prenom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("fonction"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("sexe"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("annee_recrutement"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("absence"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("heure_de_travail"));
+
+    ui->tabler->setModel(model);
+    ui->tabler->show();
+    msgBox.setText("Tri avec succes.");
+    msgBox.exec();
+}
+
+void MainWindow::on_Pb_trier_sexe_clicked()
+{
+    QMessageBox msgBox;
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYE order by sexe ASC");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prenom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("fonction"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("sexe"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("annee_recrutement"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("absence"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("heure_de_travail"));
+
+    ui->tabler->setModel(model);
+    ui->tabler->show();
+    msgBox.setText("Tri avec succes.");
+    msgBox.exec();
+}
+
+void MainWindow::on_Pb_image_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this, tr("Choose"),"",tr("Image(*png *,jpg *,jpeg *.bmp *.gif"));
+if (QString::compare(filename,QString())!=0)
+{
+    QImage image;
+    bool valid = image.load(filename);
+    if(valid)
+    {
+        image = image.scaledToWidth(ui->le_image->width(),Qt::SmoothTransformation);
+        ui->le_image->setPixmap(QPixmap::fromImage(image));
+    }
+    else
+    {
+        //Error handling
+    }
+}
 }

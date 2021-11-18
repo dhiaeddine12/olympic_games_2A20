@@ -31,8 +31,15 @@ public:
 
       bool ajouter();
       QSqlQueryModel* afficher();
+      QSqlQueryModel* afficher_nom(QString);
+      QSqlQueryModel* afficher_fonction(QString);
+      QSqlQueryModel* afficher_id(int);
       bool Supprimer(int);
       bool Modifier(int);
+      bool rechercher_nom(QString );
+      bool rechercher_fonction(QString );
+      bool rechercher_identifiant(int );
+
 
 private:
     int id, age, annee_recrutement, absence, heure_de_travail;

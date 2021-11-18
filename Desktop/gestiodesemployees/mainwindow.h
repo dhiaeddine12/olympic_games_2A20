@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include"employe.h"
+#include<QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,10 +19,15 @@ public:
 private slots:
 
     void on_pb_ajouter_clicked();
-
     void on_pushButton_clicked();
-
     void on_pb_modifier_clicked();
+    void on_Pb_recherche_nom_clicked();
+    void on_Pb_recherche_fonction_clicked();
+    void on_Pb_recherche_identifiant_clicked();
+    void on_Pb_trier_age_clicked();
+    void on_Pb_trier_annee_de_recrutement_clicked();
+    void on_Pb_trier_sexe_clicked();
+    void on_Pb_image_clicked();
 
 private:
     Ui::MainWindow *ui;
