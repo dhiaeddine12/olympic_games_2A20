@@ -27,8 +27,7 @@ s.ajouter1();
 
 
 QMessageBox::information(this,"REGISTER","registration successful");
-mainwindow = new MainWindow(this);
-   mainwindow->show();
+
 }
 
 void login::on_pb_login_clicked()
