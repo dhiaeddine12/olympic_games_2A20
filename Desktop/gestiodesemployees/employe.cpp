@@ -3,6 +3,9 @@
 #include<QSqlQuery>
 #include<QtDebug>
 #include <QObject>
+#include <QtCharts/QChartView>
+#include <QPieSlice>
+#include <QPieSeries>
 
 Employe::Employe()
 {

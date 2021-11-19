@@ -3,6 +3,9 @@
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
+#include <QtCharts/QChartView>
+#include <QPieSlice>
+#include <QPieSeries>
 
 class Employe
 {

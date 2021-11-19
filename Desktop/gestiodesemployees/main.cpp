@@ -3,6 +3,10 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QtDebug>
+#include <QtCharts/QChartView>
+#include <QPieSlice>
+#include <QPieSeries>
+
 
 int main(int argc, char *argv[])
 {

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>922</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,59 @@
    <widget class="QTabWidget" name="pb_supprimer">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>721</width>
+      <x>30</x>
+      <y>70</y>
+      <width>791</width>
       <height>521</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane { /* The tab widget frame */
+border-top: 2px solid #2a2a2a; 
+border-left: 2px solid #2a2a2a;
+border-right: 2px solid #2a2a2a ; 
+border-bottom: 2px solid #2a2a2a; 
+background: #dcdcdc;
+	
+	
+	/*border-top-color: rgb(0, 0, 0);*/
+
+}
+QTabWidget::tab-bar {
+left: 0px; /* move to the right by 5px */
+}
+QTabBar::tab {
+background: #dcdcdc;
+border: 2px solid #535353;
+border-bottom-color: #535353; 
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+min-width: 80px;
+padding: 8px;
+color: rgb(50, 50, 162);
+	color: rgb(0, 0, 0);
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:selected,QTabBar::tab:hover {
+	
+	
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 127);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #535353; /* same as pane color */
+color: #dcdcdc;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+    </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -33,10 +78,10 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>671</width>
-        <height>461</height>
+        <x>60</x>
+        <y>30</y>
+        <width>681</width>
+        <height>431</height>
        </rect>
       </property>
       <property name="title">
@@ -235,16 +280,6 @@
         </rect>
        </property>
       </widget>
-      <widget class="QLineEdit" name="le_sexe">
-       <property name="geometry">
-        <rect>
-         <x>480</x>
-         <y>50</y>
-         <width>113</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="le_annee_recrutement">
        <property name="geometry">
         <rect>
@@ -275,51 +310,104 @@
         </rect>
        </property>
       </widget>
+      <widget class="QComboBox" name="Box_sexe">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>50</y>
+         <width>73</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>-20</x>
+         <y>-35</y>
+         <width>871</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+       </property>
+      </widget>
+      <zorder>label_21</zorder>
+      <zorder>label</zorder>
+      <zorder>label_2</zorder>
+      <zorder>label_3</zorder>
+      <zorder>label_4</zorder>
+      <zorder>pb_ajouter</zorder>
+      <zorder>le_id</zorder>
+      <zorder>le_nom</zorder>
+      <zorder>le_prenom</zorder>
+      <zorder>label_5</zorder>
+      <zorder>label_6</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_8</zorder>
+      <zorder>label_9</zorder>
+      <zorder>label_10</zorder>
+      <zorder>le_fonction</zorder>
+      <zorder>le_age</zorder>
+      <zorder>le_annee_recrutement</zorder>
+      <zorder>le_absence</zorder>
+      <zorder>le_heure_de_travail</zorder>
+      <zorder>Box_sexe</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
       <string>Inserer image</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QPushButton" name="Pb_image">
       <property name="geometry">
        <rect>
-        <x>49</x>
-        <y>29</y>
-        <width>591</width>
+        <x>580</x>
+        <y>390</y>
+        <width>161</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Choisir image</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="le_image">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>85</y>
+        <width>241</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>15</y>
+        <width>701</width>
         <height>421</height>
        </rect>
       </property>
-      <property name="title">
-       <string>insertion image</string>
+      <property name="text">
+       <string/>
       </property>
-      <widget class="QPushButton" name="Pb_image">
-       <property name="geometry">
-        <rect>
-         <x>412</x>
-         <y>190</y>
-         <width>141</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Choisir une image</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="le_image">
-       <property name="geometry">
-        <rect>
-         <x>55</x>
-         <y>75</y>
-         <width>201</width>
-         <height>281</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+      <property name="pixmap">
+       <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+      </property>
      </widget>
+     <zorder>label_22</zorder>
+     <zorder>Pb_image</zorder>
+     <zorder>le_image</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -328,13 +416,45 @@
      <widget class="QTableView" name="tab_employe">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>50</y>
-        <width>671</width>
-        <height>411</height>
+        <x>60</x>
+        <y>80</y>
+        <width>601</width>
+        <height>341</height>
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>35</y>
+        <width>731</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Pb_mise_a_jour">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Misa à jour</string>
+      </property>
+     </widget>
+     <zorder>label_23</zorder>
+     <zorder>tab_employe</zorder>
+     <zorder>Pb_mise_a_jour</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -376,6 +496,26 @@
        <string>Supprimer</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>25</y>
+        <width>701</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_25</zorder>
+     <zorder>label_11</zorder>
+     <zorder>le_id_supp</zorder>
+     <zorder>pushButton</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -560,16 +700,6 @@
         </rect>
        </property>
       </widget>
-      <widget class="QLineEdit" name="le_sexe_modifier">
-       <property name="geometry">
-        <rect>
-         <x>440</x>
-         <y>50</y>
-         <width>113</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="le_annee_recrutement_modifier">
        <property name="geometry">
         <rect>
@@ -613,6 +743,52 @@
         <string>Modifier</string>
        </property>
       </widget>
+      <widget class="QComboBox" name="Box_sexe_modifier">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>50</y>
+         <width>73</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>-25</x>
+         <y>-5</y>
+         <width>731</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+       </property>
+      </widget>
+      <zorder>label_26</zorder>
+      <zorder>label_12</zorder>
+      <zorder>label_13</zorder>
+      <zorder>label_14</zorder>
+      <zorder>label_15</zorder>
+      <zorder>label_16</zorder>
+      <zorder>label_17</zorder>
+      <zorder>label_18</zorder>
+      <zorder>label_19</zorder>
+      <zorder>label_20</zorder>
+      <zorder>le_id_modifier</zorder>
+      <zorder>le_nom_modifier</zorder>
+      <zorder>le_prenom_modifier</zorder>
+      <zorder>le_fonction_modifier</zorder>
+      <zorder>le_age_modifier</zorder>
+      <zorder>le_annee_recrutement_modifier</zorder>
+      <zorder>le_absence_modifier</zorder>
+      <zorder>le_heure_de_travail_modifier</zorder>
+      <zorder>pb_modifier</zorder>
+      <zorder>Box_sexe_modifier</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
@@ -697,7 +873,7 @@
        <string>sexe</string>
       </property>
      </widget>
-     <widget class="QLabel" name="le_nom_r">
+     <widget class="QLabel" name="le_nom_1">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -710,7 +886,7 @@
        <string>nom</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="le_nom_r">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -720,7 +896,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="le_fonction_r">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -730,7 +906,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="le_id_r">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -740,7 +916,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="le_fonction_r">
+     <widget class="QLabel" name="le_fonction_1">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -753,7 +929,7 @@
        <string>fonction</string>
       </property>
      </widget>
-     <widget class="QLabel" name="le_id_r">
+     <widget class="QLabel" name="le_id_1">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -792,11 +968,101 @@
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>15</y>
+        <width>761</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_27</zorder>
+     <zorder>Pb_recherche_nom</zorder>
+     <zorder>Pb_recherche_fonction</zorder>
+     <zorder>Pb_recherche_identifiant</zorder>
+     <zorder>Pb_trier_age</zorder>
+     <zorder>Pb_trier_annee_de_recrutement</zorder>
+     <zorder>Pb_trier_sexe</zorder>
+     <zorder>le_nom_1</zorder>
+     <zorder>le_nom_r</zorder>
+     <zorder>le_fonction_r</zorder>
+     <zorder>le_id_r</zorder>
+     <zorder>le_fonction_1</zorder>
+     <zorder>le_id_1</zorder>
+     <zorder>label_24</zorder>
+     <zorder>tabler</zorder>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
       <string>statistiqes</string>
      </attribute>
+     <widget class="QPushButton" name="Pb_stat_absence">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>191</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>statistique d'absence</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Pb_stat_heure_de_travail">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>140</y>
+        <width>201</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>statistique d'heure de travail</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Pb_stat_age">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>140</y>
+        <width>201</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>statistique d'age</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>781</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_28</zorder>
+     <zorder>Pb_stat_absence</zorder>
+     <zorder>Pb_stat_heure_de_travail</zorder>
+     <zorder>Pb_stat_age</zorder>
     </widget>
    </widget>
   </widget>
@@ -805,7 +1071,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>922</width>
      <height>26</height>
     </rect>
    </property>
