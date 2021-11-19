@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 
     if(lang == "English")
     {
-        t.load("/english.qm");
+        t.load(":/english.qm");
     }
 
-    if(lang != "English")
+    if(lang != "french")
     {
         a.installTranslator(&t);
     }
