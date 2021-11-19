@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     {
         t.load(":/english.qm");
     }
-
+//
     if(lang != "french")
     {
         a.installTranslator(&t);
