@@ -43,9 +43,16 @@ if(s.LOGIN == "wabi" && s.PASSWORD == "wabi")
     mainwindow = new MainWindow(this);
        mainwindow->show();
 }
+
+else if(s.LOGIN == "cc" && s.PASSWORD == "cc")
+{
+    QMessageBox::information(this,"login","login et password correct");
+    mainwindow = new MainWindow(this);
+       mainwindow->show();
+}
 else
 {
-   QMessageBox::warning(this,"login","login ou password deja");
+   QMessageBox::warning(this,"login","login ou password incorrect");
 
 }
 

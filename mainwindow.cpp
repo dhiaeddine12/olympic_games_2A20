@@ -263,4 +263,5 @@ void MainWindow::on_pb_somme_clicked()
 
      qDebug() << "le nombre de sportif : " << nb++;
 
+
 }
