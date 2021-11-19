@@ -208,11 +208,6 @@ void gestion_medaille::on_calendarWidget_clicked(const QDate &date)
 
 
 
-void gestion_medaille::on_tabWidget_currentChanged(int index)
-{
-    index=3;
-    ui->tableView_somme->setModel(mdl.afficherS());
-}
 
 void gestion_medaille::on_somme_clicked()
 {
