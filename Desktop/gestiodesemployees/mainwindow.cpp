@@ -227,29 +227,29 @@ void MainWindow::on_Pb_stat_absence_clicked()
 
                 QSqlQueryModel * model= new QSqlQueryModel();
                 model->setQuery("select * from EMPLOYE where ABSENCE <1 ");
-                float tranche_age1=model->rowCount();
+                float tranche_absences1=model->rowCount();
                 model->setQuery("select * from EMPLOYE where ABSENCE  between 1 and 10 ");
-                float tranche_age2=model->rowCount();
+                float tranche_absences2=model->rowCount();
                 model->setQuery("select * from EMPLOYE where ABSENCE >10 ");
-                float tranche_age3=model->rowCount();
-                float total=tranche_age1+tranche_age2+tranche_age3;
-                QString a=QString("Aucune absence . "+QString::number((tranche_age1*100)/total,'f',2)+"%" );
-                QString b=QString("Entre 1 et 10 absences .  "+QString::number((tranche_age2*100)/total,'f',2)+"%" );
-                QString c=QString("Plus que 10 absences ."+QString::number((tranche_age3*100)/total,'f',2)+"%" );
+                float tranche_absences3=model->rowCount();
+                float total=tranche_absences1+tranche_absences2+tranche_absences3;
+                QString a=QString("Aucune absence . "+QString::number((tranche_absences1*100)/total,'f',2)+"%" );
+                QString b=QString("Entre 1 et 10 absences .  "+QString::number((tranche_absences2*100)/total,'f',2)+"%" );
+                QString c=QString("Plus que 10 absences ."+QString::number((tranche_absences3*100)/total,'f',2)+"%" );
                 QPieSeries *series = new QPieSeries();
-                series->append(a,tranche_age1);
-                series->append(b,tranche_age2);
-                series->append(c,tranche_age3);
-                if (tranche_age1!=0)
+                series->append(a,tranche_absences1);
+                series->append(b,tranche_absences2);
+                series->append(c,tranche_absences3);
+                if (tranche_absences1!=0)
                 {QPieSlice *slice = series->slices().at(0);
                     slice->setLabelVisible();
                     slice->setPen(QPen());}
-                if ( tranche_age2!=0)
+                if ( tranche_absences2!=0)
                 {
                     QPieSlice *slice1 = series->slices().at(1);
                     slice1->setLabelVisible();
                 }
-                if(tranche_age3!=0)
+                if(tranche_absences3!=0)
                 {
                     QPieSlice *slice2 = series->slices().at(2);
                     slice2->setLabelVisible();
@@ -269,29 +269,29 @@ void MainWindow::on_Pb_stat_heure_de_travail_clicked()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
     model->setQuery("select * from EMPLOYE where HEURE_DE_TRAVAIL between 10 and 20 ");
-    float tranche_age1=model->rowCount();
+    float tranche_heure1=model->rowCount();
     model->setQuery("select * from EMPLOYE where HEURE_DE_TRAVAIL  between 20 and 30 ");
-    float tranche_age2=model->rowCount();
+    float tranche_heure2=model->rowCount();
     model->setQuery("select * from EMPLOYE where HEURE_DE_TRAVAIL between 30 and 45 ");
-    float tranche_age3=model->rowCount();
-    float total=tranche_age1+tranche_age2+tranche_age3;
-    QString a=QString("Entre 10 et 20 ans . "+QString::number((tranche_age1*100)/total,'f',2)+"%" );
-    QString b=QString("Entre 20 et 30 ans .  "+QString::number((tranche_age2*100)/total,'f',2)+"%" );
-    QString c=QString("Entre 30 et 45 ans ."+QString::number((tranche_age3*100)/total,'f',2)+"%" );
+    float tranche_heure3=model->rowCount();
+    float total=tranche_heure1+tranche_heure2+tranche_heure3;
+    QString a=QString("Entre 10 et 20 ans . "+QString::number((tranche_heure1*100)/total,'f',2)+"%" );
+    QString b=QString("Entre 20 et 30 ans .  "+QString::number((tranche_heure2*100)/total,'f',2)+"%" );
+    QString c=QString("Entre 30 et 45 ans ."+QString::number((tranche_heure3*100)/total,'f',2)+"%" );
     QPieSeries *series = new QPieSeries();
-    series->append(a,tranche_age1);
-    series->append(b,tranche_age2);
-    series->append(c,tranche_age3);
-    if (tranche_age1!=0)
+    series->append(a,tranche_heure1);
+    series->append(b,tranche_heure2);
+    series->append(c,tranche_heure3);
+    if (tranche_heure1!=0)
     {QPieSlice *slice = series->slices().at(0);
         slice->setLabelVisible();
         slice->setPen(QPen());}
-    if ( tranche_age2!=0)
+    if ( tranche_heure2!=0)
     {
         QPieSlice *slice1 = series->slices().at(1);
         slice1->setLabelVisible();
     }
-    if(tranche_age3!=0)
+    if(tranche_heure3!=0)
     {
         QPieSlice *slice2 = series->slices().at(2);
         slice2->setLabelVisible();
