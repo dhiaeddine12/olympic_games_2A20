@@ -29,13 +29,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(0, 9999999, this));
-    ui->le_id_r->setValidator( new QIntValidator(0, 9999999, this));
+
 
     ui->le_age->setValidator( new QIntValidator(0, 99, this));
     ui->le_age_2->setValidator( new QIntValidator(0, 99, this));
     ui->tab_sportifs->setModel(s.afficher());
    ui->comboBox_id_supp->setModel(s.affichervaleur("id"));
     ui->comboBox_id_m->setModel(s.affichervaleur("id"));
+    ui->comboBox_ri->setModel(s.affichervaleur("id"));
+    ui->comboBox_rn->setModel(s.affichervaleur("nom"));
+    ui->comboBox_rt->setModel(s.affichervaleur("type_sport"));
 
 }
 
@@ -137,7 +140,7 @@ void MainWindow::on_pb_modifier_clicked()
 void MainWindow::on_pb_rechercher_clicked()
 {
      sportifs s;
-    QString nom= ui->le_nom_r->text();
+    QString nom= ui->comboBox_rn->currentText();
      ui->tabler->setModel(s.afficher_nom(nom));
 }
 
@@ -147,7 +150,7 @@ void MainWindow::on_pb_rechercher_clicked()
 void MainWindow::on_pb_rechercher_id_clicked()
 {
     sportifs s;
-   int id= ui->le_id_r->text().toInt();;
+   int id= ui->comboBox_ri->currentText().toInt();
     ui->tabler->setModel(s.afficher_id(id));
 
 }
@@ -155,7 +158,8 @@ void MainWindow::on_pb_rechercher_id_clicked()
 void MainWindow::on_pb_rechercher_type_sport_clicked()
 {
     sportifs s;
-   QString type_sport= ui->le_nom_r->text();
+  // QString type_sport= ui->le_nom_r->text();
+    QString type_sport= ui->comboBox_rt->currentText();
     ui->tabler->setModel(s.afficher_type_sport(type_sport));
 
 }
