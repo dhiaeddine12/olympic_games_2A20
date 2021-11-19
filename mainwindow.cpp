@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->le_age->setValidator( new QIntValidator(0, 99, this));
     ui->le_age_2->setValidator( new QIntValidator(0, 99, this));
     ui->tab_sportifs->setModel(s.afficher());
-   ui->comboBox_id_supp->setModel(s.affichervaleur("id"));
+  ui->comboBox_id_supp->setModel(s.affichervaleur("id"));
     ui->comboBox_id_m->setModel(s.affichervaleur("id"));
     ui->comboBox_ri->setModel(s.affichervaleur("id"));
     ui->comboBox_rn->setModel(s.affichervaleur("nom"));
