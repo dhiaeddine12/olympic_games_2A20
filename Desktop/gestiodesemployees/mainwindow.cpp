@@ -246,25 +246,18 @@ void MainWindow::on_Pb_stat_absence_clicked()
                     slice->setPen(QPen());}
                 if ( tranche_age2!=0)
                 {
-                    // Add label, explode and define brush for 2nd slice
                     QPieSlice *slice1 = series->slices().at(1);
-                    //slice1->setExploded();
                     slice1->setLabelVisible();
                 }
                 if(tranche_age3!=0)
                 {
-                    // Add labels to rest of slices
                     QPieSlice *slice2 = series->slices().at(2);
-                    //slice1->setExploded();
                     slice2->setLabelVisible();
                 }
-                // Create the chart widget
                 QChart *chart = new QChart();
-                // Add data to chart with title and hide legend
                 chart->addSeries(series);
                 chart->setTitle("Absence Par Pourcentage des Employes :Nombre Des Employes "+ QString::number(total));
                 chart->legend()->hide();
-                // Used to display the chart
                 QChartView *chartView = new QChartView(chart);
                 chartView->setRenderHint(QPainter::Antialiasing);
                 chartView->resize(1000,500);
@@ -295,25 +288,18 @@ void MainWindow::on_Pb_stat_heure_de_travail_clicked()
         slice->setPen(QPen());}
     if ( tranche_age2!=0)
     {
-        // Add label, explode and define brush for 2nd slice
         QPieSlice *slice1 = series->slices().at(1);
-        //slice1->setExploded();
         slice1->setLabelVisible();
     }
     if(tranche_age3!=0)
     {
-        // Add labels to rest of slices
         QPieSlice *slice2 = series->slices().at(2);
-        //slice1->setExploded();
         slice2->setLabelVisible();
     }
-    // Create the chart widget
     QChart *chart = new QChart();
-    // Add data to chart with title and hide legend
     chart->addSeries(series);
     chart->setTitle("Heure de travail Par Pourcentage des Employes :Nombre Des Employes "+ QString::number(total));
     chart->legend()->hide();
-    // Used to display the chart
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->resize(1000,500);
@@ -343,25 +329,18 @@ void MainWindow::on_Pb_stat_age_clicked()
         slice->setPen(QPen());}
     if ( tranche_age2!=0)
     {
-        // Add label, explode and define brush for 2nd slice
         QPieSlice *slice1 = series->slices().at(1);
-        //slice1->setExploded();
         slice1->setLabelVisible();
     }
     if(tranche_age3!=0)
     {
-        // Add labels to rest of slices
         QPieSlice *slice2 = series->slices().at(2);
-        //slice1->setExploded();
         slice2->setLabelVisible();
     }
-    // Create the chart widget
     QChart *chart = new QChart();
-    // Add data to chart with title and hide legend
     chart->addSeries(series);
     chart->setTitle("Age Par Pourcentage des Employes :Nombre Des Employes "+ QString::number(total));
     chart->legend()->hide();
-    // Used to display the chart
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->resize(1000,500);
@@ -384,5 +363,4 @@ void MainWindow::on_Pb_mise_a_jour_clicked()
 
     ui->tab_employe->setModel(model);
     ui->tab_employe->show();
-    //return model;
 }
