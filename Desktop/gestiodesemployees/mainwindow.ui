@@ -69,7 +69,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -650,16 +650,6 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <string>heure_de_travail</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="le_id_modifier">
-       <property name="geometry">
-        <rect>
-         <x>130</x>
-         <y>40</y>
-         <width>113</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="le_nom_modifier">
        <property name="geometry">
         <rect>
@@ -769,6 +759,16 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <pixmap>../../Downloads/257574892_749156223152588_711608511979727183_n (1).png</pixmap>
        </property>
       </widget>
+      <widget class="QComboBox" name="Box_modifier">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>40</y>
+         <width>73</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
       <zorder>label_26</zorder>
       <zorder>label_12</zorder>
       <zorder>label_13</zorder>
@@ -779,7 +779,6 @@ margin-top: 2px; /* make non-selected tabs look smaller */
       <zorder>label_18</zorder>
       <zorder>label_19</zorder>
       <zorder>label_20</zorder>
-      <zorder>le_id_modifier</zorder>
       <zorder>le_nom_modifier</zorder>
       <zorder>le_prenom_modifier</zorder>
       <zorder>le_fonction_modifier</zorder>
@@ -789,6 +788,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
       <zorder>le_heure_de_travail_modifier</zorder>
       <zorder>pb_modifier</zorder>
       <zorder>Box_sexe_modifier</zorder>
+      <zorder>Box_modifier</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_5">

@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
             ui->setupUi(this);
             ui->le_id->setValidator( new QIntValidator(0, 99999999, this));
-            ui->le_id_modifier->setValidator( new QIntValidator(0, 99999999, this));
+            ui->Box_modifier->setValidator( new QIntValidator(0, 99999999, this));
             ui->le_id_r->setValidator( new QIntValidator(0, 99999999, this));
             ui->Box_supprimer->setValidator( new QIntValidator(0, 99999999, this));
             ui->le_age->setValidator( new QIntValidator(0, 60, this));
@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
             ui->Box_sexe_modifier->addItem("Femme");
             ui->Box_sexe_modifier->addItem("Homme");
             ui->Box_supprimer->setModel(E.affichervaleur("id"));
+            ui->Box_modifier->setModel(E.affichervaleur("id"));
 
 
 
@@ -105,7 +106,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pb_modifier_clicked()
 {
-    int id=ui->le_id_modifier->text().toInt();
+    int id=ui->Box_modifier->currentText().toInt();
     QString nom=ui->le_nom_modifier->text();
     QString prenom=ui->le_prenom_modifier->text();
      QString fonction=ui->le_fonction_modifier->text();
