@@ -1,5 +1,5 @@
-QT       += core gui sql
-
+QT       += core gui sql multimedia multimediawidgets
+QT       += core gui charts #-----satistiques
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11

@@ -10,6 +10,8 @@
 #include<QSqlDatabase>
 #include<QSqlError>
 #include<QSqlQuery>
+#include<QMediaPlayer>
+
 namespace Ui
 {
 class gestion_medaille;
@@ -17,7 +19,7 @@ class gestion_medaille;
 class gestion_medaille : public QDialog
 {
     Q_OBJECT
-medaille mdl;
+
 public:
     explicit gestion_medaille(QWidget *parent = nullptr);
     ~gestion_medaille();
@@ -29,9 +31,33 @@ private slots:
 
     void on_pushButton_Modifier_clicked();
 
+
+
+
+
+
+
+       void on_triM_clicked();
+
+       void on_triA_clicked();
+
+       void on_triID_clicked();
+
+       void on_pushButton_rech_clicked();
+
+       void on_calendarWidget_clicked(const QDate &date);
+
+
+       void on_tabWidget_currentChanged(int index);
+
+       void on_somme_clicked();
+
+       void on_stat_clicked();
+
 private:
     Ui::gestion_medaille *ui;
-
+medaille mdl;
+    QMediaPlayer* player;
 };
 
 #endif // GESTION_MEDAILLE_H
