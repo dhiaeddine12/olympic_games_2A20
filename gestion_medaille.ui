@@ -92,7 +92,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -351,19 +351,6 @@ border: none;
       </rect>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_sup">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>170</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
@@ -521,6 +508,16 @@ border: none;
       <string>STAT</string>
      </property>
     </widget>
+    <widget class="QComboBox" name="sup_id">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -592,7 +589,7 @@ border: none;
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Année d'obtention&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;date d'obtention&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_pays_3">
@@ -631,16 +628,6 @@ border: none;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;ID&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_idM_3">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>50</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_Modifier">
      <property name="geometry">
       <rect>
@@ -670,6 +657,16 @@ border: none;
      </property>
      <property name="text">
       <string>Modifier</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="MOD_ID">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>40</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
      </property>
     </widget>
    </widget>

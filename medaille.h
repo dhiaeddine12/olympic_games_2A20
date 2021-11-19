@@ -38,10 +38,8 @@ public:
 
     QSqlQueryModel* rechercherP(QString );
     QSqlQueryModel* rechercherD(QString );
-    bool modifierG(int ,QString);
-    bool modifierAr(int ,QString);
 
-    bool modifierBr(int ,QString);
+    QSqlQueryModel* affichervaleur(QString valeur);
     QSqlQueryModel * afficherS();
 
 

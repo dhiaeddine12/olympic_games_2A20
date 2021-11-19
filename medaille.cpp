@@ -25,9 +25,8 @@ bool medaille::ajouter()
    QSqlQuery query;
 
     QString ID_M_S = QString::number(ID_M);
-    query.prepare("insert into MEDAILLE (ID_M,TYPE_MEDAILLE,DATE_OBTENTION,TYPE_S,PAYS)"
-                  "values(:ID_M,:TYPE_MEDAILLE,:DATE_OBTENTION,:TYPE_S,:PAYS)");
-
+    query.prepare("insert into MEDAILLE (ID_M,TYPE_MEDAILLE,DATE_OBTENTION,TYPE_S,PAYS,NBR_MEDAILLE)"
+                  "values(:ID_M,:TYPE_MEDAILLE,:DATE_OBTENTION,:TYPE_S,:PAYS,:NBR_MEDAILLE)");
        query.bindValue(":ID_M",ID_M_S);
        query.bindValue(":TYPE_MEDAILLE",TYPE_MEDAILLE);
        query.bindValue(":DATE_OBTENTION",DATE_OBTENTION);
@@ -98,40 +97,17 @@ bool medaille::modifier(int id, QString TYPE_MEDAILLE ,QString DATE_OBTENTION, Q
 }
 
 
-bool medaille::modifierG(int gold, QString PAYS)
+QSqlQueryModel* medaille::affichervaleur(QString valeur)
 {
-    QSqlQuery query;
-    QString res=QString::number(gold);
-            query.prepare("update SOMME set GOLD WHERE PAYS=:PAYS");
-            query.bindValue(":GOLD",res);
+    QSqlQueryModel * model=new QSqlQueryModel();
+    QString ch="SELECT ";
+    QString query=" FROM medaille";
+    query=ch+valeur+query;
+    model->setQuery(query);
+    return model;
 
-            return  query.exec();
+
 }
-
-
-bool medaille::modifierAr(int argent, QString PAYS)
-{
-    QSqlQuery query;
-    QString res=QString::number(argent);
-            query.prepare("update SOMME set ARGENT WHERE PAYS=:PAYS");
-            query.bindValue(":PAYS",PAYS);
-            query.bindValue(":ARGENT",res);
-
-            return  query.exec();
-}
-
-
-bool medaille::modifierBr(int bronze, QString PAYS)
-{
-    QSqlQuery query;
-    QString res=QString::number(bronze);
-            query.prepare("update SOMME set BRONZE WHERE PAYS=:PAYS");
-            query.bindValue(":BRONZE",res);
-
-            return  query.exec();
-}
-
-
 
 
 

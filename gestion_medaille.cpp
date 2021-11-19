@@ -36,6 +36,8 @@ gestion_medaille::gestion_medaille(QWidget *parent) :
     ui->lineEdit_ID_M->setValidator(new QIntValidator(1,99999999,this));
     //ui->lineEdit_DATE_OBTENTION->setValidator(new QIntValidator(0,3000,this));
     player = new QMediaPlayer(this);
+    ui->MOD_ID->setModel(mdl.affichervaleur("ID_M"));
+    ui->sup_id->setModel(mdl.affichervaleur("ID_M"));
 }
 
 gestion_medaille::~gestion_medaille()
@@ -88,7 +90,7 @@ else if ((ui->lineEdit_TYPE_S->text().isEmpty()||ui->lineEdit_TYPE_MEDAILLE->tex
 
 void gestion_medaille::on_pushButton_supprimer_clicked()
 {
- int id=ui->lineEdit_sup->text().toInt();
+ int id=ui->sup_id->currentText().toInt();
 
  bool test1=mdl.supprimer(id);
  if (test1)
@@ -114,7 +116,7 @@ void gestion_medaille::on_pushButton_supprimer_clicked()
 void gestion_medaille::on_pushButton_Modifier_clicked()
 {
     medaille m;
-    int ID_M=ui->lineEdit_idM_3->text().toInt();
+    int ID_M=ui->MOD_ID->currentText().toInt();
   QString TYPE_MEDAILLE=ui->lineEdit_type_m_3->text();
   QString DATE_OBTENTION=ui->lineEdit_annee_3->text();
    QString PAYS=ui->lineEdit_pays_3->text();
@@ -130,47 +132,13 @@ void gestion_medaille::on_pushButton_Modifier_clicked()
                                              "click Cancel to exit."),QMessageBox::Cancel);
 
     }
-    else if ((ui->lineEdit_idM_3->text().isEmpty()))
-                {
-                    QMessageBox::critical(nullptr,QObject::tr("not ok"),
-                               QObject::tr("donne l id de medaille\n"
-                                           "click Cancel to exit."),QMessageBox::Cancel);
-                }
     else
         QMessageBox::critical(nullptr,QObject::tr("Not OK"),
                    QObject::tr("modification non effectué.\n"
                                "Click Cancel to exit."),QMessageBox::Cancel);
 }
 
-/*void gestion_medaille::on_sendBtn_clicked()
-{
-    Smtp* smtp = new Smtp("dhia.zeddini.14@gmail.com",ui->mail_pass->text(), "Smtp.gmail.com");
-        connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
-    //(const QString &from, const QString &to, const QString &subject, const QString &body)
-        if( !files.isEmpty() )
-            smtp->sendMail("dhia.zeddini.14@gmail.com", ui->rcpt->text() ,ui->sujet->text(), ui->msg->toPlainText(), files );
-        else
-            smtp->sendMail("dhia.zeddini.14@gmail.com", ui->rcpt->text() ,ui->sujet->text(),ui->msg->toPlainText());
-}
 
-void gestion_medaille::on_browseBtn_clicked()
-{
-    files.clear();
-
-    QFileDialog dialog(this);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setFileMode(QFileDialog::ExistingFiles);
-
-    if (dialog.exec())
-        files = dialog.selectedFiles();
-
-    QString fileListString;
-    foreach(QString file, files)
-        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
-
-    ui->file->setText( fileListString );
-}
-*/
 
 void gestion_medaille::on_triM_clicked()
 {
@@ -209,24 +177,19 @@ void gestion_medaille::on_calendarWidget_clicked(const QDate &date)
 
 
 
-void gestion_medaille::on_somme_clicked()
-{
-
-}
-
 void gestion_medaille::on_stat_clicked()
 {
 
     QSqlQueryModel * model= new QSqlQueryModel();
-                                model->setQuery("select * from MEDAILLE where ID_M between 12 and 78 ");
+                                model->setQuery("select * from MEDAILLE where ID_M between 1 and 78 ");
                                 float nbr1=model->rowCount();
-                                model->setQuery("select * from MEDAILLE where ID_M >12 ");
+                                model->setQuery("select * from MEDAILLE where ID_M >1 ");
                                 float nbr2=model->rowCount();
                                 model->setQuery("select * from MEDAILLE where ID_M >78 ");
                                 float nbr3=model->rowCount();
                                 float total=nbr1+nbr2+nbr3;
-                                QString a=QString(" ID_M between 12 and 78 "+QString::number((nbr1*100)/total,'f',2)+"%" );
-                                QString b=QString(" ID_M >12 "+QString::number((nbr2*100)/total,'f',2)+"%" );
+                                QString a=QString(" ID_M between 1 and 78 "+QString::number((nbr1*100)/total,'f',2)+"%" );
+                                QString b=QString(" ID_M >1 "+QString::number((nbr2*100)/total,'f',2)+"%" );
                                 QString c=QString("  ID_M >78 "+QString::number((nbr3*100)/total,'f',2)+"%" );
                                 QPieSeries *series = new QPieSeries();
                                 series->append(a,nbr1);

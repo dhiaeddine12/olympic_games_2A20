@@ -48,9 +48,8 @@ private slots:
        void on_calendarWidget_clicked(const QDate &date);
 
 
-       void on_tabWidget_currentChanged(int index);
 
-       void on_somme_clicked();
+
 
        void on_stat_clicked();
 
