@@ -18,6 +18,10 @@ public:
 private slots:
     void on_pb_login_clicked();
 
+    void on_pb_register_clicked();
+
+
+
 private:
     Ui::login *ui;
     MainWindow *mainwindow;

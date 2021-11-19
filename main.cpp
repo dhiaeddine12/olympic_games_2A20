@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Connection c;
+
     login l;
     login_bd b;
     bool test =b.createconnect1();

@@ -194,6 +194,19 @@ bool sportifs::ajouter1()
    return query.exec();
 }
 
+bool signin(QString LOGIN,QString PASSWORD)
+{
+
+     QSqlQuery query;
+     query.prepare("SELECT * FROM LOGIN WHERE LOGIN= :LOGIN AND PASSWORD= :PASSWORD");
+     query.bindValue(":LOGIN",LOGIN);
+      query.bindValue(":PASSWORD",PASSWORD);
+      query.exec();
+
+return query.exec();
+
+}
+
 QSqlQueryModel* sportifs::affichervaleur(QString valeur)
 {
     QSqlQueryModel * model=new QSqlQueryModel();

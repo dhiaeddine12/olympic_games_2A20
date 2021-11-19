@@ -31,7 +31,6 @@ HEADERS += \
     login.h \
     login_bd.h \
     mainwindow.h \
-    signup.h \
     sportifs.h
 
 FORMS += \

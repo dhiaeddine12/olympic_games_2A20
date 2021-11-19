@@ -225,7 +225,7 @@ void MainWindow::on_pb_update_clicked()
          model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
          model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
          model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
-           model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
+         model->setHeaderData(3, Qt::Horizontal, QObject::tr("type_sport"));
          model->setHeaderData(4, Qt::Horizontal, QObject::tr("age"));
 
          ui->tab_sportifs->setModel(model);

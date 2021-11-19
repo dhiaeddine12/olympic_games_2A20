@@ -20,6 +20,7 @@ public:
     void setage(int);
     bool ajouter();
     bool ajouter1();
+    bool signin(QString,QString);
    QSqlQueryModel* afficher();
    QSqlQueryModel* afficher_id(int);
    QSqlQueryModel* afficher_nom(QString);
