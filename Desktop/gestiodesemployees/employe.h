@@ -31,7 +31,7 @@ public:
     void setannee_recrutement(int);
     void setabsence(int);
     void setheure_de_travail(int);
-
+     QSqlQueryModel* affichervaleur(QString );
       bool ajouter();
       QSqlQueryModel* afficher();
       QSqlQueryModel* afficher_nom(QString);

@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
             ui->le_id->setValidator( new QIntValidator(0, 99999999, this));
             ui->le_id_modifier->setValidator( new QIntValidator(0, 99999999, this));
             ui->le_id_r->setValidator( new QIntValidator(0, 99999999, this));
-            ui->le_id_supp->setValidator( new QIntValidator(0, 99999999, this));
+            ui->Box_supprimer->setValidator( new QIntValidator(0, 99999999, this));
             ui->le_age->setValidator( new QIntValidator(0, 60, this));
             ui->le_age_modifier->setValidator( new QIntValidator(0, 60, this));
             ui->le_absence->setValidator( new QIntValidator(0, 99, this));
@@ -35,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
             ui->Box_sexe_modifier->addItem(" ");
             ui->Box_sexe_modifier->addItem("Femme");
             ui->Box_sexe_modifier->addItem("Homme");
+            ui->Box_supprimer->setModel(E.affichervaleur("id"));
 
 
 
@@ -90,7 +91,7 @@ void MainWindow::on_Pb_image_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     Employe E1;
-    E1.setid(ui->le_id_supp->text().toInt());
+    E1.setid(ui->Box_supprimer->currentText().toInt());
     bool test=E1.Supprimer(E1.getid());
   QMessageBox msgBox;
   if(test)

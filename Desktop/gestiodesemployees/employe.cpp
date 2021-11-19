@@ -273,3 +273,15 @@ bool   Employe::rechercher_identifiant(int id)
 
  }
 
+QSqlQueryModel* Employe::affichervaleur(QString valeur)
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    QString ch="SELECT ";
+    QString query=" FROM EMPLOYE";
+    query=ch+valeur+query;
+    model->setQuery(query);
+    return model;
+
+
+}
+
