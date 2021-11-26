@@ -250,7 +250,7 @@ void MainWindow::on_pb_print_clicked()
 
 }
 
-void MainWindow::on_pb_somme_clicked()
+/* void MainWindow::on_pb_somme_clicked()
 {
     QSqlQuery query;
      int nb = 0;
@@ -264,4 +264,10 @@ void MainWindow::on_pb_somme_clicked()
      qDebug() << "le nombre de sportif : " << nb++;
 
 
+}
+*/
+
+void MainWindow::on_pb_sommee_clicked()
+{
+      ui->tableView->setModel(s.somme());
 }

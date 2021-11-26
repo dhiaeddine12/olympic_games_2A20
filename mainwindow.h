@@ -43,6 +43,10 @@ private slots:
 
     void on_pb_somme_clicked();
 
+
+
+    void on_pb_sommee_clicked();
+
 private:
     Ui::MainWindow *ui;
     sportifs s;

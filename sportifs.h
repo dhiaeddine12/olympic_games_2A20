@@ -26,12 +26,13 @@ public:
    QSqlQueryModel* afficher_nom(QString);
    QSqlQueryModel* afficher_type_sport(QString);
    QSqlQueryModel* affichervaleur(QString);
+   QSqlQueryModel* somme();
    bool supprimer(int);
    bool modifier(int);
    bool rechercher_nom(QString);
    bool rechercher_type_sport(QString);
    bool rechercher_id(int);
-   bool somme();
+
   QString LOGIN,PASSWORD;
 private :
     int id,age;

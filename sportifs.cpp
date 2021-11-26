@@ -219,3 +219,9 @@ QSqlQueryModel* sportifs::affichervaleur(QString valeur)
 
 }
 
+QSqlQueryModel * sportifs::somme()
+
+{QSqlQueryModel * model6 = new QSqlQueryModel();
+    model6->setQuery("SELECT COUNT(*)FROM SPORTIF");
+    return model6;
+ }
