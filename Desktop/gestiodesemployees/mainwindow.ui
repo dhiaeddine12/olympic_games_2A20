@@ -69,7 +69,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -96,6 +96,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>Identifiant</string>
        </property>
@@ -109,6 +125,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>Nom</string>
        </property>
@@ -121,6 +153,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>56</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>Prenom</string>
@@ -147,6 +195,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>93</width>
          <height>28</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>Ajouter</string>
@@ -191,6 +255,23 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
        <property name="text">
         <string>fonction</string>
        </property>
@@ -203,6 +284,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>56</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>age</string>
@@ -217,6 +314,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>sexe</string>
        </property>
@@ -229,6 +342,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>121</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>annee_recrutement</string>
@@ -243,6 +372,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>absence</string>
        </property>
@@ -255,6 +400,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>111</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>heure_de_travail</string>
@@ -372,6 +533,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>Choisir image</string>
       </property>
@@ -448,6 +625,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>Misa à jour</string>
       </property>
@@ -469,6 +662,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>16</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>ID</string>
       </property>
@@ -481,6 +690,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>93</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>Supprimer</string>
@@ -542,6 +767,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>Identifiant</string>
        </property>
@@ -554,6 +795,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>56</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>Nom</string>
@@ -568,6 +825,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>Prenom</string>
        </property>
@@ -580,6 +853,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>56</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>fonction</string>
@@ -594,6 +883,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>age</string>
        </property>
@@ -606,6 +911,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>56</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>sexe</string>
@@ -620,6 +941,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>annee_recrutement</string>
        </property>
@@ -633,6 +970,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>16</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>absence</string>
        </property>
@@ -645,6 +998,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <width>111</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
        </property>
        <property name="text">
         <string>heure_de_travail</string>
@@ -729,6 +1098,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
          <height>28</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+       </property>
        <property name="text">
         <string>Modifier</string>
        </property>
@@ -804,6 +1189,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>rechercher</string>
       </property>
@@ -816,6 +1217,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>93</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>rechercher</string>
@@ -830,6 +1247,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>rechercher</string>
       </property>
@@ -842,6 +1275,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>93</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>age</string>
@@ -856,6 +1305,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>annee de recrutement</string>
       </property>
@@ -869,6 +1334,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>sexe</string>
       </property>
@@ -881,6 +1362,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>56</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>nom</string>
@@ -925,6 +1422,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>16</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>fonction</string>
       </property>
@@ -937,6 +1450,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>56</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>identifiant</string>
@@ -952,7 +1481,20 @@ margin-top: 2px; /* make non-selected tabs look smaller */
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 12pt &quot;Arial&quot;;</string>
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>Trier</string>
@@ -1013,6 +1555,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>statistique d'absence</string>
       </property>
@@ -1026,6 +1584,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <height>28</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
       <property name="text">
        <string>statistique d'heure de travail</string>
       </property>
@@ -1038,6 +1612,22 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <width>201</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
       </property>
       <property name="text">
        <string>statistique d'age</string>
