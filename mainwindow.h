@@ -1,54 +1,47 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "gestionsportif.h"
+#include"gestionvolontaire.h"
 #include <QMainWindow>
-#include "sportifs.h"
-
-
+#include "gestionemploye.h"
+#include "gestion_medaille.h"
+#include "gestionmateriel.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+namespace Ui {
+class  MainWindow;
+}
 
-class MainWindow : public QMainWindow
+class  MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit  MainWindow(QWidget *parent = nullptr);
+    ~ MainWindow();
 
 private slots:
 
-    void on_pb_ajouter_clicked();
-
-    void on_pb_supprimer_clicked();
-
-    void on_pb_modifier_clicked();
-
-    void on_pb_rechercher_clicked();
-
-    void on_pb_rechercher_id_clicked();
-
-    void on_pb_rechercher_type_sport_clicked();
-
-    void on_pb_trier_n_clicked();
-
-    void on_pb_trier_i_clicked();
-
-    void on_pb_trier_a_clicked();
-
-    void on_pb_update_clicked();
-
-    void on_pb_print_clicked();
-
-    void on_pb_somme_clicked();
 
 
+    void on_pushButton_clicked();
 
-    void on_pb_sommee_clicked();
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
-    Ui::MainWindow *ui;
-    sportifs s;
+    Ui:: MainWindow*ui;
+ Gestionsportif *sportiff;
+ Gestionvolontaire *vol;
+gestionemploye *emp;
+gestion_medaille *med;
+Gestionmateriel *mat;
 };
+
 #endif // MAINWINDOW_H

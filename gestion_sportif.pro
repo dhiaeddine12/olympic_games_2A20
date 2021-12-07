@@ -1,4 +1,5 @@
-QT       += core gui sql printsupport \
+QT       += core gui sql multimedia multimediawidgets
+QT       += core gui sql network printsupport charts
     quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -18,23 +19,45 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    employe.cpp \
+    gestion_medaille.cpp \
+    gestionemploye.cpp \
+    gestionmateriel.cpp \
+    gestionsportif.cpp \
+    gestionvolontaire.cpp \
     login.cpp \
     login_bd.cpp \
     main.cpp \
     mainwindow.cpp \
-    sportifs.cpp
+    materiel.cpp \
+    medaille.cpp \
+    sportifs.cpp \
+    volontaire.cpp
 
 HEADERS += \
     connection.h \
+    employe.h \
+    gestion_medaille.h \
+    gestionemploye.h \
+    gestionmateriel.h \
+    gestionsportif.h \
+    gestionvolontaire.h \
     login.h \
     login.h \
     login.h \
     login_bd.h \
     mainwindow.h \
-    sportifs.h
+    materiel.h \
+    medaille.h \
+    sportifs.h \
+    volontaire.h
 
 FORMS += \
-    gestionsportifs.ui \
+    gestion_medaille.ui \
+    gestionemploye.ui \
+    gestionmateriel.ui \
+    gestionsportif.ui \
+    gestionvolontaire.ui \
     login.ui \
     mainwindow.ui
 
@@ -42,3 +65,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    tarduction.qrc

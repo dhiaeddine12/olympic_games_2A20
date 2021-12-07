@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gestionsportif</class>
+ <widget class="QDialog" name="Gestionsportif">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>861</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane { /* The tab widget frame */
+border-top: 2px solid #2a2a2a; 
+border-left: 2px solid #2a2a2a;
+border-right: 2px solid #2a2a2a ; 
+border-bottom: 2px solid #2a2a2a; 
+background: #dcdcdc;
+	
+	
+	/*border-top-color: rgb(0, 0, 0);*/
+
+}
+QTabWidget::tab-bar {
+left: 0px; /* move to the right by 5px */
+}
+QTabBar::tab {
+background: #dcdcdc;
+border: 2px solid #535353;
+border-bottom-color: #535353; 
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+min-width: 80px;
+padding: 8px;
+color: rgb(50, 50, 162);
+	color: rgb(0, 0, 0);
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:selected,QTabBar::tab:hover {
+	
+	
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 127);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #535353; /* same as pane color */
+color: #dcdcdc;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>5</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>ajouter un sportif</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>721</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>ajout</string>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>    ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>   nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>prenom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_id">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>50</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_nom">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_prenom">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>130</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>    age</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>type_sport</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_age">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>180</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_typesport">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_ajouter">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>140</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+      </property>
+      <property name="text">
+       <string>ajouter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>861</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/o.g/wp4216264.webp</pixmap>
+     </property>
+    </widget>
+    <zorder>label_14</zorder>
+    <zorder>groupBox</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>supprimer un sportif</string>
+    </attribute>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>130</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>identifiant</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_supprimer">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>supprimer</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_id_supp">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>130</y>
+       <width>119</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+     border: 1px solid #bac4e0;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+ 
+ QComboBox:editable {
+     background: #bac4e0;
+ }
+ 
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                   stop: 0 #d5ddf7, stop: 1 #b0c2f7);
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 23px;
+ 
+     border-left-width: 1px;
+     border-left-color: #bac4e0;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+ 
+ QComboBox::down-arrow {
+     image: url(C:/Users/Administrateur/Downloads/Atelier_Connexion/icon.png);
+ }</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>861</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/o.g/Diving-Rio_2016_Olympic_Games_HD_Vector_Wallpaper_1366x768.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_13</zorder>
+    <zorder>label_6</zorder>
+    <zorder>pb_supprimer</zorder>
+    <zorder>comboBox_id_supp</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>afficher les sportifs</string>
+    </attribute>
+    <widget class="QTableView" name="tab_sportifs">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>521</width>
+       <height>311</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_update">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>90</y>
+       <width>131</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>mise à jour</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_print">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>370</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>impression</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>320</y>
+       <width>521</width>
+       <height>151</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>-300</x>
+       <y>0</y>
+       <width>1161</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/olympic-games-rio-2016-rio-de-janeiro-brazil-corcovado-wallpaper.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_19</zorder>
+    <zorder>tab_sportifs</zorder>
+    <zorder>pb_update</zorder>
+    <zorder>pb_print</zorder>
+    <zorder>textEdit</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>modifier un sportif</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>70</y>
+       <width>511</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>modifier</string>
+     </property>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>prenom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_nom_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_prenom_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>130</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>180</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>age</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>230</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>type_sport</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_age_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>180</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_typesport_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+     border: 2px solid #6374a6;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #dce3f7;
+ }</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_modifier">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>140</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+      </property>
+      <property name="text">
+       <string>modifier</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_id_m">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>40</y>
+        <width>119</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+     border: 1px solid #bac4e0;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+ 
+ QComboBox:editable {
+     background: #bac4e0;
+ }
+ 
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                   stop: 0 #d5ddf7, stop: 1 #b0c2f7);
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 23px;
+ 
+     border-left-width: 1px;
+     border-left-color: #bac4e0;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+ 
+ QComboBox::down-arrow {
+     image: url(C:/Users/Administrateur/Downloads/Atelier_Connexion/icon.png);
+ }</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>-70</x>
+       <y>0</y>
+       <width>931</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/o.g/wp4390809.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_12</zorder>
+    <zorder>groupBox_2</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>rechercher et trier un sportif</string>
+    </attribute>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>    nom</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>70</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>    ID</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+color: #000000;
+background:#FFFF00;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>type_sport</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tabler">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>511</width>
+       <height>192</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_rechercher">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>110</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>rechercher</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_rechercher_id">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>110</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>rechercher</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_rechercher_type_sport">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>110</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>rechercher</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_trier_n">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>180</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>trier par nom</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_trier_i">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>240</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>trier par id</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_trier_a">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>trier par age</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_rn">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>90</y>
+       <width>119</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+     border: 1px solid #bac4e0;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+ 
+ QComboBox:editable {
+     background: #bac4e0;
+ }
+ 
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                   stop: 0 #d5ddf7, stop: 1 #b0c2f7);
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 23px;
+ 
+     border-left-width: 1px;
+     border-left-color: #bac4e0;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+ 
+ QComboBox::down-arrow {
+     image: url(C:/Users/Administrateur/Downloads/Atelier_Connexion/icon.png);
+ }</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_ri">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>90</y>
+       <width>119</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+     border: 1px solid #bac4e0;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+ 
+ QComboBox:editable {
+     background: #bac4e0;
+ }
+ 
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                   stop: 0 #d5ddf7, stop: 1 #b0c2f7);
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 23px;
+ 
+     border-left-width: 1px;
+     border-left-color: #bac4e0;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+ 
+ QComboBox::down-arrow {
+     image: url(C:/Users/Administrateur/Downloads/Atelier_Connexion/icon.png);
+ }</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_rt">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>90</y>
+       <width>119</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+     border: 1px solid #bac4e0;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+ 
+ QComboBox:editable {
+     background: #bac4e0;
+ }
+ 
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                   stop: 0 #d5ddf7, stop: 1 #b0c2f7);
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 23px;
+ 
+     border-left-width: 1px;
+     border-left-color: #bac4e0;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+ 
+ QComboBox::down-arrow {
+     image: url(C:/Users/Administrateur/Downloads/Atelier_Connexion/icon.png);
+ }</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>-770</x>
+       <y>0</y>
+       <width>1711</width>
+       <height>1211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/o.g/Runner-Rio_2016_Olympic_Games_HD_Vector_Wallpaper_2560x1600.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_18</zorder>
+    <zorder>label_15</zorder>
+    <zorder>label_16</zorder>
+    <zorder>label_17</zorder>
+    <zorder>tabler</zorder>
+    <zorder>pb_rechercher</zorder>
+    <zorder>pb_rechercher_id</zorder>
+    <zorder>pb_rechercher_type_sport</zorder>
+    <zorder>pb_trier_n</zorder>
+    <zorder>pb_trier_i</zorder>
+    <zorder>pb_trier_a</zorder>
+    <zorder>comboBox_rn</zorder>
+    <zorder>comboBox_ri</zorder>
+    <zorder>comboBox_rt</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>somme</string>
+    </attribute>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>411</width>
+       <height>251</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_sommee">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>160</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+border-radius: 8px;
+color: rgb(255,255,0);
+background-color: rgba(239, 0, 0);
+border: 2px solid ;
+}
+QPushButton:hover
+{
+color: rgb(239, 0, 0);
+background-color: rgb(255,255,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>Somme</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-390</y>
+       <width>871</width>
+       <height>911</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>D:/projet c++/o.g/wp4390814.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_20</zorder>
+    <zorder>tableView</zorder>
+    <zorder>pb_sommee</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

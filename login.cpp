@@ -1,10 +1,12 @@
 #include "login.h"
 #include "ui_login.h"
 #include <QtDebug>
-#include "mainwindow.h"
+#include "gestionsportif.h"
 #include "sportifs.h"
 #include <QMessageBox>
 #include <QSqlQuery>
+#include"mainwindow.h"
+
 
 login::login(QWidget *parent) :
     QDialog(parent),
@@ -40,15 +42,15 @@ void login::on_pb_login_clicked()
 if(s.LOGIN == "wabi" && s.PASSWORD == "wabi")
 {
     QMessageBox::information(this,"login","login et password correct");
-    mainwindow = new MainWindow(this);
-       mainwindow->show();
+ q = new MainWindow(this);
+       q->show();
 }
 
 else if(s.LOGIN == "cc" && s.PASSWORD == "cc")
 {
     QMessageBox::information(this,"login","login et password correct");
-    mainwindow = new MainWindow(this);
-       mainwindow->show();
+    q = new MainWindow(this);
+          q->show();
 }
 else
 {

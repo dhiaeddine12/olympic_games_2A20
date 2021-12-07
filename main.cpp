@@ -1,15 +1,34 @@
-#include "mainwindow.h"
+#include "gestionsportif.h"
 #include <QApplication>
 #include <QMessageBox>
 #include <connection.h>
 #include <QtDebug>
 #include "login.h"
 #include "login_bd.h"
-
+#include "gestionvolontaire.h"
+#include <QTranslator>
+#include <QInputDialog>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    QTranslator t;
+        QStringList langue;
+        langue <<"French" <<"English";
+        QString lang = QInputDialog::getItem(NULL,"SELECT LANGUAGE",
+                                            "LANGAGUE",langue );
+
+        if(lang == "English")
+        {
+            t.load(":/english.qm");
+        }
+
+        if(lang != "french")
+        {
+            a.installTranslator(&t);
+        }
+
     Connection c;
 
     login l;
