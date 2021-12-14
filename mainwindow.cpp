@@ -46,3 +46,14 @@ void MainWindow::on_pushButton_5_clicked()
     mat=new Gestionmateriel(this);
     mat->show();
 }
+
+void MainWindow::update_etat()
+{
+  data =A.read_from_arduino();
+    ui->label_3->setText(data);
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    A.write_to_arduino("1");
+}

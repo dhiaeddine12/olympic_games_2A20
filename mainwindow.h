@@ -35,6 +35,10 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+void update_etat();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui:: MainWindow*ui;
  Gestionsportif *sportiff;
@@ -42,6 +46,9 @@ private:
 gestionemploye *emp;
 gestion_medaille *med;
 Gestionmateriel *mat;
+
+Arduino A;
+QByteArray data;
 };
 
 #endif // MAINWINDOW_H

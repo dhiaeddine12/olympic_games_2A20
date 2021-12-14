@@ -5,6 +5,7 @@
 
 #include"volontaire.h"
  #include<QSystemTrayIcon>
+#include "arduino.h"
 
 
 namespace Ui {
@@ -42,10 +43,15 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+
+
 private:
     Ui::Gestionvolontaire * ui;
     volontaire tmp;
       QSystemTrayIcon *mSystemTrayIcon ;
+      QByteArray data; // variable contenant les données reçues
+
+      Arduino A;
 };
 
 

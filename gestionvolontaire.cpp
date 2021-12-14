@@ -32,6 +32,17 @@ Gestionvolontaire::Gestionvolontaire(QWidget *parent) :
     mSystemTrayIcon = new QSystemTrayIcon(this);
       mSystemTrayIcon->setIcon(QIcon("C:\\Users\\dhia\\Desktop\\gestion_sportif2\\logo.png")); // app icon
        mSystemTrayIcon->setVisible(true);
+       int ret=A.connect_arduino(); // lancer la connexion à arduino
+       switch(ret){
+       case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+           break;
+       case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+          break;
+       case(-1):qDebug() << "arduino is not available";
+       }
+        QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+        //le slot update_label suite à la reception du signal readyRead (reception des données).
+
 
 
 }
@@ -57,7 +68,7 @@ void Gestionvolontaire::on_pushButton_ajouter_clicked()
                    test=V.ajouter();
                            if(test)
                                {
-
+A.write_to_arduino("1");
                                   QMessageBox msgBox ;
                                   QMessageBox::information(this,"information","volontaire ajouté");
                                    ui->comboBox_id->setModel(tmp.afficher_id());
@@ -66,7 +77,7 @@ void Gestionvolontaire::on_pushButton_ajouter_clicked()
 
                                   }
                                    else
-                                   {
+                                   {A.write_to_arduino("0");
                                        QMessageBox msgBox ;
                                        QMessageBox::information(this,"information","volontaire non ajouté");
                                        mSystemTrayIcon->showMessage(tr("notification"),tr("ajout echoué"));
@@ -86,13 +97,13 @@ void Gestionvolontaire::on_pushButton_annuler_clicked()
 void Gestionvolontaire::on_pushButton_afficher_clicked()
 {
     ui->tablea->setModel(tmp.afficher_dispo());
-   // ui->tablea->setModel(tmp.trier());
+   ui->tablea->setModel(tmp.trier());
 }
 
 void Gestionvolontaire::on_pushButton_clicked()
 {
      ui->tablea->setModel(tmp.afficher_non_dispo());
-    // ui->tablea->setModel(tmp.trier2());
+     ui->tablea->setModel(tmp.trier2());
 }
 
 void Gestionvolontaire::on_pushButton_2_clicked()
@@ -259,3 +270,5 @@ void Gestionvolontaire::on_pushButton_5_clicked()
 {
     ui->tablea->setModel(tmp.somme());
 }
+
+

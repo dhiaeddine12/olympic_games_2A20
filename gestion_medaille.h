@@ -38,7 +38,7 @@ private slots:
 
     void on_lineedit_rech_clicked();
 
-    void on_pushButton_clicked();
+   // void on_pushButton_clicked();
 
 private:
  Ui::gestion_medaille *ui;
