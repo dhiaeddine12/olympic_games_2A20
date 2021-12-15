@@ -79,7 +79,7 @@ background-color: rgb(169,169,169);
 }</string>
      </property>
      <property name="text">
-      <string>Gestion de volontaire</string>
+      <string>gestion de volontaire</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_3">
