@@ -68,7 +68,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">

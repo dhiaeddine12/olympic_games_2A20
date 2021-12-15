@@ -421,8 +421,8 @@ border: none;
       <rect>
        <x>510</x>
        <y>130</y>
-       <width>101</width>
-       <height>31</height>
+       <width>111</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
